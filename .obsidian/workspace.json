@@ -160,8 +160,10 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "94e4a920a63a02fa",
+  "active": "8f0abb43baf97170",
   "lastOpenFiles": [
+    "HTML/index.html",
+    "index.html",
     "src/Chapitre_1.md",
     "src/Chapitre_10.md",
     "src/Chapitre_11.md",
@@ -189,7 +191,6 @@
     "Web/src",
     "Web",
     "HTML/src/chapitre_10.html",
-    "HTML/src/chapitre_1.html",
     "Source/Chapitre_1.md",
     "Source/Chapitre_6.md"
   ]
