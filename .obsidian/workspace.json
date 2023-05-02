@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "0282c8690972a8bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "12021d424494eb95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d61117c382882d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Index.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "2e872fe6f0fa4191",
+    "type": "split",
+    "children": [
+      {
+        "id": "7dbde0ce48922bdc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "8f0abb43baf97170",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a3e001fa024003c3",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a34b28360f422d39",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "04f1d91656d1cd6f",
+    "type": "split",
+    "children": [
+      {
+        "id": "a03769fed1df6de7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "711ad47cbd18c2ad",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3632b689bf020940",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Index.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "3a18879a88bb8c79",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "47ec8cc001587a47",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Index.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "webpage-html-export:Export Vault to HTML": false
+    }
+  },
+  "active": "53d61117c382882d",
+  "lastOpenFiles": [
+    "src/Chapitre_1.md",
+    "Index.md",
+    "src/Chapitre_9.md",
+    "src/Chapitre_8.md",
+    "src/Chapitre_7.md",
+    "src/Chapitre_6.md",
+    "src/Chapitre_10.md",
+    "src/Chapitre_5.pdf",
+    "HTML/src/Chapitre_5.pdf",
+    "src/Chapitre_5.md",
+    "src/Chapitre_11.md",
+    "src/Chapitre_12.md",
+    "src/Chapitre_13.md",
+    "src/Chapitre_14.md",
+    "src/Chapitre_15.md",
+    "src/Chapitre_2.md",
+    "src/Chapitre_4.md",
+    "src/Chapitre_3.md",
+    "src/cours_sem_12_gestion-memoire_memo.pdf",
+    "HTML/src/index.html",
+    "HTML/src/chapitre_7.html",
+    "Web/src/Chapitre_5.pdf.md",
+    "Web/src",
+    "Web",
+    "HTML/src/chapitre_10.html",
+    "HTML/src/chapitre_1.html",
+    "HTML/src/chapitre_11.html",
+    "Source/Chapitre_1.md",
+    "Source/Chapitre_6.md"
+  ]
+}

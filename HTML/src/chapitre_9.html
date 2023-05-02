@@ -1,0 +1,2684 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Chapitre_9</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+
+  <link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+  <script src="https://pixijs.download/v7.2.4/pixi.js"></script>
+
+
+  <link rel="stylesheet" href="../styles/obsidian-styles.css">
+  <link rel="stylesheet" href="../styles/plugin-styles.css">
+  <link rel="stylesheet" href="../styles/theme.css">
+  <link rel="stylesheet" href="../styles/snippets.css">
+
+  <style> </style>
+  <style>
+    mjx-container[jax="CHTML"] {
+      line-height: 0;
+    }
+
+    mjx-container [space="1"] {
+      margin-left: .111em;
+    }
+
+    mjx-container [space="2"] {
+      margin-left: .167em;
+    }
+
+    mjx-container [space="3"] {
+      margin-left: .222em;
+    }
+
+    mjx-container [space="4"] {
+      margin-left: .278em;
+    }
+
+    mjx-container [space="5"] {
+      margin-left: .333em;
+    }
+
+    mjx-container [rspace="1"] {
+      margin-right: .111em;
+    }
+
+    mjx-container [rspace="2"] {
+      margin-right: .167em;
+    }
+
+    mjx-container [rspace="3"] {
+      margin-right: .222em;
+    }
+
+    mjx-container [rspace="4"] {
+      margin-right: .278em;
+    }
+
+    mjx-container [rspace="5"] {
+      margin-right: .333em;
+    }
+
+    mjx-container [size="s"] {
+      font-size: 70.7%;
+    }
+
+    mjx-container [size="ss"] {
+      font-size: 50%;
+    }
+
+    mjx-container [size="Tn"] {
+      font-size: 60%;
+    }
+
+    mjx-container [size="sm"] {
+      font-size: 85%;
+    }
+
+    mjx-container [size="lg"] {
+      font-size: 120%;
+    }
+
+    mjx-container [size="Lg"] {
+      font-size: 144%;
+    }
+
+    mjx-container [size="LG"] {
+      font-size: 173%;
+    }
+
+    mjx-container [size="hg"] {
+      font-size: 207%;
+    }
+
+    mjx-container [size="HG"] {
+      font-size: 249%;
+    }
+
+    mjx-container [width="full"] {
+      width: 100%;
+    }
+
+    mjx-box {
+      display: inline-block;
+    }
+
+    mjx-block {
+      display: block;
+    }
+
+    mjx-itable {
+      display: inline-table;
+    }
+
+    mjx-row {
+      display: table-row;
+    }
+
+    mjx-row>* {
+      display: table-cell;
+    }
+
+    mjx-mtext {
+      display: inline-block;
+    }
+
+    mjx-mstyle {
+      display: inline-block;
+    }
+
+    mjx-merror {
+      display: inline-block;
+      color: red;
+      background-color: yellow;
+    }
+
+    mjx-mphantom {
+      visibility: hidden;
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root mjx-container {
+      will-change: opacity;
+    }
+
+    mjx-assistive-mml {
+      position: absolute !important;
+      top: 0px;
+      left: 0px;
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 1px 0px 0px 0px !important;
+      border: 0px !important;
+      display: block !important;
+      width: auto !important;
+      overflow: hidden !important;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    mjx-assistive-mml[display="block"] {
+      width: 100% !important;
+    }
+
+    mjx-math {
+      display: inline-block;
+      text-align: left;
+      line-height: 0;
+      text-indent: 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 100%;
+      font-size-adjust: none;
+      letter-spacing: normal;
+      border-collapse: collapse;
+      word-wrap: normal;
+      word-spacing: normal;
+      white-space: nowrap;
+      direction: ltr;
+      padding: 1px 0;
+    }
+
+    mjx-container[jax="CHTML"][display="true"] {
+      display: block;
+      text-align: center;
+      margin: 1em 0;
+    }
+
+    mjx-container[jax="CHTML"][display="true"][width="full"] {
+      display: flex;
+    }
+
+    mjx-container[jax="CHTML"][display="true"] mjx-math {
+      padding: 0;
+    }
+
+    mjx-container[jax="CHTML"][justify="left"] {
+      text-align: left;
+    }
+
+    mjx-container[jax="CHTML"][justify="right"] {
+      text-align: right;
+    }
+
+    mjx-mo {
+      display: inline-block;
+      text-align: left;
+    }
+
+    mjx-stretchy-h {
+      display: inline-table;
+      width: 100%;
+    }
+
+    mjx-stretchy-h>* {
+      display: table-cell;
+      width: 0;
+    }
+
+    mjx-stretchy-h>*>mjx-c {
+      display: inline-block;
+      transform: scalex(1.0000001);
+    }
+
+    mjx-stretchy-h>*>mjx-c::before {
+      display: inline-block;
+      width: initial;
+    }
+
+    mjx-stretchy-h>mjx-ext {
+      /* IE */
+      overflow: hidden;
+      /* others */
+      overflow: clip visible;
+      width: 100%;
+    }
+
+    mjx-stretchy-h>mjx-ext>mjx-c::before {
+      transform: scalex(500);
+    }
+
+    mjx-stretchy-h>mjx-ext>mjx-c {
+      width: 0;
+    }
+
+    mjx-stretchy-h>mjx-beg>mjx-c {
+      margin-right: -.1em;
+    }
+
+    mjx-stretchy-h>mjx-end>mjx-c {
+      margin-left: -.1em;
+    }
+
+    mjx-stretchy-v {
+      display: inline-block;
+    }
+
+    mjx-stretchy-v>* {
+      display: block;
+    }
+
+    mjx-stretchy-v>mjx-beg {
+      height: 0;
+    }
+
+    mjx-stretchy-v>mjx-end>mjx-c {
+      display: block;
+    }
+
+    mjx-stretchy-v>*>mjx-c {
+      transform: scaley(1.0000001);
+      transform-origin: left center;
+      overflow: hidden;
+    }
+
+    mjx-stretchy-v>mjx-ext {
+      display: block;
+      height: 100%;
+      box-sizing: border-box;
+      border: 0px solid transparent;
+      /* IE */
+      overflow: hidden;
+      /* others */
+      overflow: visible clip;
+    }
+
+    mjx-stretchy-v>mjx-ext>mjx-c::before {
+      width: initial;
+      box-sizing: border-box;
+    }
+
+    mjx-stretchy-v>mjx-ext>mjx-c {
+      transform: scaleY(500) translateY(.075em);
+      overflow: visible;
+    }
+
+    mjx-mark {
+      display: inline-block;
+      height: 0px;
+    }
+
+    mjx-c {
+      display: inline-block;
+    }
+
+    mjx-utext {
+      display: inline-block;
+      padding: .75em 0 .2em 0;
+    }
+
+    mjx-c::before {
+      display: block;
+      width: 0;
+    }
+
+    .MJX-TEX {
+      font-family: MJXZERO, MJXTEX;
+    }
+
+    .TEX-B {
+      font-family: MJXZERO, MJXTEX-B;
+    }
+
+    .TEX-I {
+      font-family: MJXZERO, MJXTEX-I;
+    }
+
+    .TEX-MI {
+      font-family: MJXZERO, MJXTEX-MI;
+    }
+
+    .TEX-BI {
+      font-family: MJXZERO, MJXTEX-BI;
+    }
+
+    .TEX-S1 {
+      font-family: MJXZERO, MJXTEX-S1;
+    }
+
+    .TEX-S2 {
+      font-family: MJXZERO, MJXTEX-S2;
+    }
+
+    .TEX-S3 {
+      font-family: MJXZERO, MJXTEX-S3;
+    }
+
+    .TEX-S4 {
+      font-family: MJXZERO, MJXTEX-S4;
+    }
+
+    .TEX-A {
+      font-family: MJXZERO, MJXTEX-A;
+    }
+
+    .TEX-C {
+      font-family: MJXZERO, MJXTEX-C;
+    }
+
+    .TEX-CB {
+      font-family: MJXZERO, MJXTEX-CB;
+    }
+
+    .TEX-FR {
+      font-family: MJXZERO, MJXTEX-FR;
+    }
+
+    .TEX-FRB {
+      font-family: MJXZERO, MJXTEX-FRB;
+    }
+
+    .TEX-SS {
+      font-family: MJXZERO, MJXTEX-SS;
+    }
+
+    .TEX-SSB {
+      font-family: MJXZERO, MJXTEX-SSB;
+    }
+
+    .TEX-SSI {
+      font-family: MJXZERO, MJXTEX-SSI;
+    }
+
+    .TEX-SC {
+      font-family: MJXZERO, MJXTEX-SC;
+    }
+
+    .TEX-T {
+      font-family: MJXZERO, MJXTEX-T;
+    }
+
+    .TEX-V {
+      font-family: MJXZERO, MJXTEX-V;
+    }
+
+    .TEX-VB {
+      font-family: MJXZERO, MJXTEX-VB;
+    }
+
+    mjx-stretchy-v mjx-c,
+    mjx-stretchy-h mjx-c {
+      font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+    }
+
+    @font-face
+
+    /* 0 */
+      {
+      font-family: MJXZERO;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 1 */
+      {
+      font-family: MJXTEX;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 2 */
+      {
+      font-family: MJXTEX-B;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 3 */
+      {
+      font-family: MJXTEX-I;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 4 */
+      {
+      font-family: MJXTEX-MI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 5 */
+      {
+      font-family: MJXTEX-BI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 6 */
+      {
+      font-family: MJXTEX-S1;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 7 */
+      {
+      font-family: MJXTEX-S2;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 8 */
+      {
+      font-family: MJXTEX-S3;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 9 */
+      {
+      font-family: MJXTEX-S4;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 10 */
+      {
+      font-family: MJXTEX-A;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 11 */
+      {
+      font-family: MJXTEX-C;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 12 */
+      {
+      font-family: MJXTEX-CB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 13 */
+      {
+      font-family: MJXTEX-FR;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 14 */
+      {
+      font-family: MJXTEX-FRB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 15 */
+      {
+      font-family: MJXTEX-SS;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 16 */
+      {
+      font-family: MJXTEX-SSB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 17 */
+      {
+      font-family: MJXTEX-SSI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 18 */
+      {
+      font-family: MJXTEX-SC;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 19 */
+      {
+      font-family: MJXTEX-T;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 20 */
+      {
+      font-family: MJXTEX-V;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 21 */
+      {
+      font-family: MJXTEX-VB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+    }
+
+    mjx-c.mjx-c27F5::before {
+      padding: 0.511em 1.609em 0.011em 0;
+      content: "\27F5";
+    }
+  </style>
+
+
+  <script id="relative-paths">
+    let rootPath = "..";
+    let mediaPath = "../media";
+    let jsPath = "../scripts";
+    let cssPath = "../styles";
+  </script>
+
+  <script>
+    async function loadDocument(url, pushHistory = true) {
+      let response;
+      try {
+        response = await fetch(url);
+      } catch (error) {
+        console.log("Cannot use fetch API (likely due to CORS), just loading the page normally.");
+        window.location.assign(url);
+        return;
+      }
+
+      let doc = document.implementation.createHTMLDocument();
+
+
+
+      deinitializePage();
+
+      if (response.ok) {
+        let html = (await response.text()).replaceAll("<!DOCTYPE html>", "").replaceAll("<html>", "").replaceAll("</html>", "");
+        doc.documentElement.innerHTML = html;
+
+        document.querySelector(".center-content").innerHTML = doc.querySelector(".center-content").innerHTML;
+        document.querySelector(".outline-container").innerHTML = doc.querySelector(".outline-container").innerHTML;
+        document.title = doc.title;
+
+        let pathsCode = doc.querySelector("#relative-paths").textContent;
+        // get a list of strings contained inside of ""
+        let paths = pathsCode.match(/"(.*?)"/g).map(function(val) {
+          return val.replace(/"/g, "");
+        });
+        rootPath = paths[0];
+        mediaPath = paths[1];
+        jsPath = paths[2];
+        cssPath = paths[3];
+
+        let splitURL = url.split("#");
+        let pathnameTarget = splitURL[0] ?? url;
+        let headingTarget = splitURL.length > 1 ? splitURL[1] : null;
+
+        // if the url has a heading, scroll to it
+        if (headingTarget) document.getElementById(headingTarget).scrollIntoView();
+
+        if (pushHistory) window.history.pushState({
+          path: pathnameTarget
+        }, '', pathnameTarget);
+      } else {
+        // if the page is not able to load instead add a header saying the page doesn't exist
+        document.querySelector(".markdown-preview-view").innerHTML =
+          `
+		<div>
+			<center style='position: relative; transform: translateY(20vh); width: 100%; text-align: center;'>
+				<h1 style>Page does not exist!</h1>
+			</center>
+		</div>
+		`;
+
+        document.querySelector(".outline-container").innerHTML = "";
+
+        document.title = "Page Not Found";
+
+        if (pushHistory) window.history.pushState({
+          path: window.location.pathname
+        }, '', window.location.pathname);
+      }
+
+      initializePage();
+
+      return doc;
+    }
+
+    //#region Initialization
+
+    function setupThemeToggle() {
+      console.log("Setting up theme toggle");
+
+      if (localStorage.getItem("theme_toggle") != null) {
+        setThemeToggle(localStorage.getItem("theme_toggle") == "true");
+      }
+
+      var lastScheme = "theme-dark";
+      // change theme to match current system theme
+      if (localStorage.getItem("theme_toggle") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        setThemeToggle(true);
+        lastScheme = "theme-light";
+      }
+      if (localStorage.getItem("theme_toggle") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setThemeToggle(true);
+        lastScheme = "theme-dark";
+      }
+
+      // set initial toggle state based on body theme class
+      if ($("body").hasClass("theme-light")) {
+        setThemeToggle(true);
+      } else {
+        setThemeToggle(false);
+      }
+
+      function setThemeToggle(state, instant = false) {
+        $(".toggle__input").each(function() {
+          $(this).prop("checked", state);
+        });
+
+        if (!$(".toggle__input").hasClass("is-checked") && state) {
+          $(".toggle__input").addClass("is-checked");
+        } else if ($(".toggle__input").hasClass("is-checked") && !state) {
+          $(".toggle__input").removeClass("is-checked");
+        }
+
+        if (!state) {
+          if ($("body").hasClass("theme-light")) {
+            $("body").removeClass("theme-light");
+          }
+
+          if (!$("body").hasClass("theme-dark")) {
+            $("body").addClass("theme-dark");
+          }
+        } else {
+          if ($("body").hasClass("theme-dark")) {
+            $("body").removeClass("theme-dark");
+          }
+
+          if (!$("body").hasClass("theme-light")) {
+            $("body").addClass("theme-light");
+          }
+        }
+
+        localStorage.setItem("theme_toggle", state ? "true" : "false");
+      }
+
+      $(".toggle__input").on("click tap", function() {
+        setThemeToggle(!(localStorage.getItem("theme_toggle") == "true"));
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        // return if we are printing
+        if (window.matchMedia('print').matches) {
+          printing = true;
+          return;
+        }
+
+        let newColorScheme = event.matches ? "theme-dark" : "theme-light";
+
+        if (newColorScheme == lastScheme) return;
+
+        if (newColorScheme == "theme-dark") {
+          setThemeToggle(false);
+        }
+
+        if (newColorScheme == "theme-light") {
+          setThemeToggle(true);
+        }
+
+        lastScheme = newColorScheme;
+      });
+    }
+
+    function setupHeaders() {
+      // MAKE HEADERS COLLAPSIBLE
+      // if "heading-collapse-indicator" is clicked, toggle the display of every div until the next heading of the same or lower level
+      function getHeadingContentsSelector(header) {
+        let headingLevel = $(header).children().first().prop("tagName").toLowerCase();
+        let headingNumber = parseInt(headingLevel.replace("h", ""));
+
+        let endingHeadings = [1, 2, 3, 4, 5, 6].filter(function(item) {
+          return item <= headingNumber;
+        }).map(function(item) {
+          return `div:has(h${item})`;
+        });
+
+        let endingHeadingsSelector = endingHeadings.join(", ");
+
+        return endingHeadingsSelector;
+      }
+
+      function setHeaderCollapse(header, collapse) {
+        let selector = getHeadingContentsSelector($(header));
+
+        if (!collapse) {
+          if ($(header).hasClass("is-collapsed")) $(header).toggleClass("is-collapsed");
+
+          $(header).nextUntil(selector).show();
+
+          // close headers inside of this one that are collapsed
+          $(header).nextUntil(selector).each(function() {
+            if ($(this).hasClass("is-collapsed"))
+              setHeaderCollapse($(this), true);
+          });
+
+          //open headers above this one that are collapsed
+          lastHeaderSize = $(header).children().first().prop("tagName").toLowerCase().replace("h", "");
+          $(header).prevAll().each(function() {
+            if ($(this).hasClass("is-collapsed") && $(this).has("h1, h2, h3, h4, h5, h6")) {
+              let hSize = $(this).children().first().prop("tagName").toLowerCase().replace("h", "");
+              if (hSize < lastHeaderSize) {
+                setHeaderCollapse($(this), false);
+                lastHeaderSize = hSize;
+              }
+            }
+          });
+        } else {
+          if (!$(header).hasClass("is-collapsed")) $(header).toggleClass("is-collapsed");
+          $(header).nextUntil(selector).hide();
+        }
+      }
+
+      $(".heading-collapse-indicator").on("click tap", function() {
+        var isCollapsed = $(this).parent().parent().hasClass("is-collapsed");
+        setHeaderCollapse($(this).parent().parent(), !isCollapsed);
+      });
+
+      // unfold header when an internal link that points to that header is clicked
+      $(".internal-link").on("click tap", function() {
+        let target = $(this).attr("href");
+
+        // if the target is a header uncollapse it
+        if (target.startsWith("#")) {
+          let header = $(document.getElementById(target.substring(1)));
+
+          setHeaderCollapse($(header).parent(), false);
+        }
+
+      });
+    }
+
+    function setupOutline() {
+      // MAKE OUTLINE COLLAPSIBLE
+      // if "outline-header" is clicked, toggle the display of every div until the next heading of the same or lower level
+      function setOutlineCollapse(header, collapse) {
+        if (collapse) {
+          if (!$(header).hasClass("is-collapsed"))
+            $(header).addClass("is-collapsed");
+
+          $(header).children(".outline-item-children").slideUp(120);
+        } else {
+          if ($(header).hasClass("is-collapsed"))
+            $(header).removeClass("is-collapsed");
+
+          $(header).children(".outline-item-children").slideDown(120);
+        }
+      }
+
+      function toggleOutlineCollapse(header) {
+        let isCollapsed = $(header).hasClass("is-collapsed");
+        setOutlineCollapse(header, !isCollapsed);
+      }
+
+      $(".outline-item-contents > .collapse-icon").on("click tap", function(e) {
+        toggleOutlineCollapse($(this).parent().parent());
+
+        // Prevent the collapse button from triggering the parent <a> tag navigation.
+        // fix implented by 'zombony' from GitHub
+        return false;
+      });
+
+      $(".collapse-all").on("click tap", function() {
+        let button = $(this);
+        $(".outline-container div.outline-item").each(function() {
+          setOutlineCollapse($(this), !button.hasClass("is-collapsed"));
+        });
+
+        button.toggleClass("is-collapsed");
+
+        button.find("iconify-icon").attr("icon", button.hasClass("is-collapsed") ? "ph:arrows-out-line-horizontal-bold" : "ph:arrows-in-line-horizontal-bold");
+      });
+
+      // hide the control button if the header has no children
+      $(".outline-item-children:not(:has(*))").each(function() {
+        $(this).parent().find(".collapse-icon").hide();
+      });
+    }
+
+    function setupCallouts() {
+      // MAKE CALLOUTS COLLAPSIBLE
+      // if the callout title is clicked, toggle the display of .callout-content
+      $(".callout.is-collapsible .callout-title").on("click tap", function() {
+        var isCollapsed = $(this).parent().hasClass("is-collapsed");
+
+        if (isCollapsed) {
+          $(this).parent().toggleClass("is-collapsed");
+        }
+
+        $(this).parent().find(".callout-content").slideToggle(duration = 100, complete = function() {
+          if (!isCollapsed) {
+            $(this).parent().toggleClass("is-collapsed");
+          }
+        });
+      });
+    }
+
+    function setupCheckboxes() {
+      // Fix checkboxed toggling .is-checked
+      $(".task-list-item-checkbox").on("click tap", function() {
+        $(this).parent().toggleClass("is-checked");
+        $(this).parent().attr("data-task", $(this).parent().hasClass("is-checked") ? "x" : " ");
+      });
+
+      $(`.plugin-tasks-list-item input[type="checkbox"]`).each(function() {
+        $(this).prop("checked", $(this).parent().hasClass("is-checked"));
+      });
+
+      $('.kanban-plugin__item.is-complete').each(function() {
+        $(this).find('input[type="checkbox"]').prop("checked", true);
+      });
+    }
+
+    function setupCanvas() {
+      let focusedNode = null;
+
+      // make canvas nodes selectable
+      $(".canvas-node-content-blocker").on("click tap", function() {
+        $(this).parent().parent().toggleClass("is-focused");
+        $(this).hide();
+
+        if (focusedNode) {
+          focusedNode.removeClass("is-focused");
+          $(focusedNode).find(".canvas-node-content-blocker").show();
+        }
+
+        focusedNode = $(this).parent().parent();
+      });
+
+      // make canvas node deselect when clicking outside
+      $(document).on("click tap", function(event) {
+        if (!$(event.target).closest(".canvas-node").length) {
+          $(".canvas-node").removeClass("is-focused");
+          $(".canvas-node-content-blocker").show();
+        }
+      });
+    }
+
+    function setupCodeblocks() {
+      // make code snippet block copy button copy the code to the clipboard
+      $(".copy-code-button").on("click tap", function() {
+        let code = $(this).parent().find("code").text();
+        navigator.clipboard.writeText(code);
+        $(this).text("Copied!");
+        // set a timeout to change the text back
+        setTimeout(function() {
+          $(".copy-code-button").text("Copy");
+        }, 2000);
+      });
+    }
+
+    function setupLinks() {
+      $(".internal-link, .footnote-link").on("click tap", function() {
+        let target = $(this).attr("href");
+
+        // this is linking to a different page
+        if (!target.startsWith("#")) {
+          console.log("Loading document: " + target);
+          // if the target is not a header, load the page
+          loadDocument(target);
+
+          // make sure link doesn't redirect
+          return false;
+        } else {
+          document.getElementById(target.substring(1)).scrollIntoView();
+          return false;
+        }
+      });
+
+      window.onpopstate = function(event) {
+        loadDocument(window.location.pathname, false);
+      }
+    }
+
+    function initializePage() {
+      setupThemeToggle();
+      setupHeaders();
+      setupOutline();
+      setupCallouts();
+      setupCheckboxes();
+      setupCanvas();
+      setupCodeblocks();
+      setupLinks();
+    }
+
+    function deinitializePage() {
+      // remove all event listeners
+      $(".toggle__input").off("click tap");
+      $(".callout.is-collapsible .callout-title").off("click tap");
+      $(".heading-collapse-indicator").off("click tap");
+      $(".outline-item-contents > .collapse-icon").off("click tap");
+      $(".collapse-all").off("click tap");
+      $(".task-list-item-checkbox").off("click tap");
+      $(".copy-code-button").off("click tap");
+      $(".canvas-node-content-blocker").off("click tap");
+      $("center-content").find("*").off("click tap");
+    }
+
+    //#endregion
+
+    jQuery(initializePage);
+  </script>
+
+</head>
+
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app show-inline-title show-view-header is-maximized" style="--zoom-factor:1; --font-text-size:16px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em;">
+  <div class="flex-container">
+    <div id="sidebar" class="sidebar-left">
+      <div class="sidebar-content">
+        <div><label class="theme-toggle" for="theme_toggle"><input class="toggle__input" type="checkbox" id="theme_toggle">
+            <div class="toggle__fill"></div>
+          </label></div>
+      </div>
+    </div>
+    <div class="center-content">
+      <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
+        <div class="markdown-preview-sizer markdown-preview-section" style="padding: unset; width: unset; height: unset; margin: unset; max-width: unset; min-height: unset;">
+          <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
+          <div class="mod-header"></div>
+          <div>
+            <h1 data-heading="Chapitre 9 - Structures de données" id="Chapitre_9_-_Structures_de_données">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Chapitre 9 - Structures de données
+            </h1>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-info">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Index</div>
+              </div>
+              <div class="callout-content">
+                <p><a aria-label-position="top" aria-label="Index" data-href="Index" href="index.html" class="internal-link" target="_self" rel="noopener">Retour à l'index</a></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 data-heading="I - Les listes chaînées" id="I_-_Les_listes_chaînées">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>I - Les listes chaînées
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="A - Présentation" id="A_-_Présentation">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>A - Présentation
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition</div>
+              </div>
+              <div class="callout-content">
+                <p>Une <strong>liste chaînée</strong> est une structure de données dans laquelle les éléments sont accessibles de manière linéraire.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="B - Représentation" id="B_-_Représentation">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>B - Représentation
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition</div>
+              </div>
+              <div class="callout-content">
+                <p>Une <strong>cellule</strong> est une paire contenant un élément et l'adresse de la cellule suivante.</p>
+                <p><span alt="Web/src/Pasted image 20221209102334.png" src="Web/src/Pasted image 20221209102334.png" class="internal-embed is-loaded file-embed mod-empty">"Web/src/Pasted image 20221209102334.png" is not created yet. Click to create.</span></p>
+                <p>La valeur <strong>NiL</strong> représente "nulle part", elle est utilisée dans la dernière case de la liste chaînée.</p>
+                <p><span alt="Web/src/Pasted image 20221209102204.png" src="Web/src/Pasted image 20221209102204.png" class="internal-embed is-loaded file-embed mod-empty">"Web/src/Pasted image 20221209102204.png" is not created yet. Click to create.</span></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="C - Opérations" id="C_-_Opérations">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>C - Opérations
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Remarque</div>
+              </div>
+              <div class="callout-content">
+                <p>Les opérations sont écrites en pseudo-code, T représente la tête de la liste est NiL la queue de la liste.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h4 data-heading="1 - Créer une liste vide" id="1_-_Créer_une_liste_vide">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1 - Créer une liste vide
+            </h4>
+          </div>
+          <div>
+            <ol>
+              <li data-line="0">T <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mo stretchy="false">⟵</mo>
+                      </math></mjx-assistive-mml></mjx-container></span> NiL </li>
+            </ol>
+          </div>
+          <div>
+            <h4 data-heading="2 - Insérer un élément en tête" id="2_-_Insérer_un_élément_en_tête">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>2 - Insérer un élément en tête
+            </h4>
+          </div>
+          <div>
+            <ol>
+              <li data-line="0">Allouer(AC)</li>
+              <li data-line="1">Contenu(AC).Succ <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mo stretchy="false">⟵</mo>
+                      </math></mjx-assistive-mml></mjx-container></span> T</li>
+              <li data-line="2">T <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mo stretchy="false">⟵</mo>
+                      </math></mjx-assistive-mml></mjx-container></span> AC</li>
+            </ol>
+          </div>
+          <div>
+            <h4 data-heading="3 - Supprimer l'élément en tête" id="3_-_Supprimer_l'élément_en_tête">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>3 - Supprimer l'élément en tête
+            </h4>
+          </div>
+          <div>
+            <ol>
+              <li data-line="0">AC <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mo stretchy="false">⟵</mo>
+                      </math></mjx-assistive-mml></mjx-container></span> T</li>
+              <li data-line="1">T <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                        <mo stretchy="false">⟵</mo>
+                      </math></mjx-assistive-mml></mjx-container></span> Contenu(AC).Succ</li>
+              <li data-line="2">Libérer(AC)</li>
+            </ol>
+          </div>
+          <div>
+            <h3 data-heading="D - Algorithmes" id="D_-_Algorithmes">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>D - Algorithmes
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="1 - Compter le nombre d'éléments positifs d'une liste chaînée" id="1_-_Compter_le_nombre_d'éléments_positifs_d'une_liste_chaînée">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1 - Compter le nombre d'éléments positifs d'une liste chaînée
+            </h4>
+          </div>
+          <div>
+            <p>AC <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> T<br>
+              N <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> 0<br>
+              tant que AC <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2260"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo>≠</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> NiL<br>
+              si Contenu(AC).E <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2A7E TEX-A"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo>⩾</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> 0<br>
+              N <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> N + 1<br>
+              AC <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> Contenu(AC).Succ<br>
+              Renvoyer(N)</p>
+          </div>
+          <div>
+            <h4 data-heading="2 - Construire une liste contenant les entiers de 1 à n, par ajout en queue" id="2_-_Construire_une_liste_contenant_les_entiers_de_1_à_n,_par_ajout_en_queue">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>2 - Construire une liste contenant les entiers de 1 à n, par ajout en queue
+            </h4>
+          </div>
+          <div>
+            <p>T <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> NiL<br>
+              Q <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> T<br>
+              pour i allant de 1 à n<br>
+              Allouer(AC)<br>
+              Contenu(AC).E <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> i<br>
+              Contenu(AC).Succ <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> NiL<br>
+              Contenu(Q).Succ <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> AC<br>
+              Q <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> Contenu(Q).Succ<br>
+              T <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> Contenu(T).Succ</p>
+          </div>
+          <div>
+            <h4 data-heading="3 - Construire une liste contenant les entiers de 1 à n, par ajout en tête" id="3_-_Construire_une_liste_contenant_les_entiers_de_1_à_n,_par_ajout_en_tête">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>3 - Construire une liste contenant les entiers de 1 à n, par ajout en tête
+            </h4>
+          </div>
+          <div>
+            <p>T <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> NiL<br>
+              tant que Contenu(T).E <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2260"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo>≠</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> 1<br>
+              Allouer(AC)<br>
+              Contenu(AC).E <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> n<br>
+              Contenu(AC).Succ <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> T<br>
+              n <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> n - 1<br>
+              T <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> AC<br>
+              Retourner(T)</p>
+          </div>
+          <div>
+            <h4 data-heading="4 - Ecrire une fonction est croissante (T)" id="4_-_Ecrire_une_fonction_est_croissante_(T)">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>4 - Ecrire une fonction est croissante (T)
+            </h4>
+          </div>
+          <div>
+            <p>Q <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> T<br>
+              tant que Contenu(Q).Succ <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c2260"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo>≠</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> NiL<br>
+              si Contenu(Contenu(Q).Succ).E &lt; Contenu(Q).E<br>
+              Retourner(Faux)<br>
+              Q <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> Contenu(Q).Succ<br>
+              Retourner(Vrai)</p>
+          </div>
+          <div>
+            <h3 data-heading="E - Exemples d'implémentation" id="E_-_Exemples_d'implémentation">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>E - Exemples d'implémentation
+            </h3>
+          </div>
+          <div>
+            <p>En Ocaml :</p>
+          </div>
+          <div>
+            <pre class="language-ocaml" tabindex="0"><code class="language-ocaml is-loaded"><span class="token keyword">type</span> <span class="token type-variable function">'a</span> list <span class="token operator">=</span>
+	<span class="token operator">|</span> Nil
+	<span class="token operator">|</span> Cons <span class="token keyword">of</span> <span class="token type-variable function">'a</span> <span class="token operator">*</span> <span class="token type-variable function">'a</span> list
+<span class="token keyword">let</span> T <span class="token operator">=</span> Cons<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> Cons<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> Nil<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>En C :</p>
+          </div>
+          <div>
+            <pre class="language-c" tabindex="0"><code class="language-c is-loaded"><span class="token keyword">struct</span> <span class="token class-name">Cellule</span> <span class="token punctuation">{</span>
+	<span class="token keyword">int</span> element<span class="token punctuation">;</span>
+	<span class="token keyword">struct</span> <span class="token class-name">Cellule</span> <span class="token operator">*</span>succ<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">Cellule</span> Cellule_t<span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Définition des algorithmes vus pécédemment en C :</p>
+          </div>
+          <div>
+            <pre class="language-c" tabindex="0"><code class="language-c is-loaded"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h&gt;</span></span>
+<span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">&lt;stdlib.h&gt;</span></span>
+
+<span class="token keyword">struct</span> <span class="token class-name">node</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> valeur<span class="token punctuation">;</span>
+    <span class="token keyword">struct</span> <span class="token class-name">node_t</span> <span class="token operator">*</span>succ<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">node</span> <span class="token class-name">node_t</span><span class="token punctuation">;</span>
+
+<span class="token keyword">int</span> <span class="token function">nb_positifs</span><span class="token punctuation">(</span><span class="token class-name">node_t</span> <span class="token operator">*</span>t<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token class-name">node_t</span> <span class="token operator">*</span>temp <span class="token operator">=</span> t<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>temp <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>temp<span class="token operator">-&gt;</span>valeur <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            n<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        temp <span class="token operator">=</span> temp<span class="token operator">-&gt;</span>succ<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> n<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+  
+<span class="token class-name">node_t</span> <span class="token operator">*</span><span class="token function">creer_liste_queue</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">node_t</span> <span class="token operator">*</span>head <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token class-name">node_t</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    head<span class="token operator">-&gt;</span>valeur <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    head<span class="token operator">-&gt;</span>succ <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token class-name">node_t</span> <span class="token operator">*</span>queue <span class="token operator">=</span> head<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">node_t</span> <span class="token operator">*</span>temp <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token class-name">node_t</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        temp<span class="token operator">-&gt;</span>valeur <span class="token operator">=</span> i<span class="token punctuation">;</span>
+        temp<span class="token operator">-&gt;</span>succ <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+  
+        queue<span class="token operator">-&gt;</span>succ <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        queue <span class="token operator">=</span> queue<span class="token operator">-&gt;</span>succ<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+  
+<span class="token class-name">node_t</span> <span class="token operator">*</span><span class="token function">creer_liste_tete</span><span class="token punctuation">(</span><span class="token keyword">int</span> n<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">node_t</span> <span class="token operator">*</span>head <span class="token operator">=</span> <span class="token constant">NULL</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>n <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">node_t</span> <span class="token operator">*</span>temp <span class="token operator">=</span> <span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token class-name">node_t</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        temp<span class="token operator">-&gt;</span>valeur <span class="token operator">=</span> n<span class="token punctuation">;</span>
+        temp<span class="token operator">-&gt;</span>succ <span class="token operator">=</span> head<span class="token punctuation">;</span>
+  
+        head <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        n<span class="token operator">--</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> head<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+  
+<span class="token keyword">int</span> <span class="token function">est_croissante</span><span class="token punctuation">(</span><span class="token class-name">node_t</span> <span class="token operator">*</span>head<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">node_t</span> <span class="token operator">*</span>queue <span class="token operator">=</span> head<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>queue<span class="token operator">-&gt;</span>succ <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">node_t</span> <span class="token operator">*</span>prochain <span class="token operator">=</span> queue<span class="token operator">-&gt;</span>succ<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>prochain<span class="token operator">-&gt;</span>valeur <span class="token operator">&lt;</span> queue<span class="token operator">-&gt;</span>valeur<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        queue <span class="token operator">=</span> queue<span class="token operator">-&gt;</span>succ<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+  
+<span class="token keyword">void</span> <span class="token function">afficher_liste</span><span class="token punctuation">(</span><span class="token class-name">node_t</span> <span class="token operator">*</span>head<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">node_t</span> <span class="token operator">*</span>temp <span class="token operator">=</span> head<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>temp <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"%d - "</span><span class="token punctuation">,</span> temp<span class="token operator">-&gt;</span>valeur<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        temp <span class="token operator">=</span> temp<span class="token operator">-&gt;</span>succ<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+  
+<span class="token keyword">void</span> <span class="token function">liberer_liste</span><span class="token punctuation">(</span><span class="token class-name">node_t</span> <span class="token operator">*</span>head<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">node_t</span> <span class="token operator">*</span>temp <span class="token operator">=</span> head<span class="token operator">-&gt;</span>succ<span class="token punctuation">;</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>temp <span class="token operator">!=</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token function">free</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        head <span class="token operator">=</span> temp<span class="token punctuation">;</span>
+        temp <span class="token operator">=</span> temp<span class="token operator">-&gt;</span>succ<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">free</span><span class="token punctuation">(</span>head<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Definition des algorithmes vus précédemment en OCaml :</p>
+          </div>
+          <div>
+            <pre class="language-ocaml" tabindex="0"><code class="language-ocaml is-loaded"><span class="token keyword">type</span> <span class="token type-variable function">'a</span> cellule <span class="token operator">=</span>
+  <span class="token operator">|</span> Nil
+  <span class="token operator">|</span> Cons <span class="token keyword">of</span> <span class="token type-variable function">'a</span> <span class="token operator">*</span> <span class="token type-variable function">'a</span> cellule
+  
+<span class="token keyword">let</span> T <span class="token operator">=</span> Cons<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> Cons<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> Nil<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  
+<span class="token keyword">let</span> nb_positif <span class="token punctuation">(</span>c <span class="token punctuation">:</span> int cellule<span class="token punctuation">)</span> <span class="token punctuation">:</span> int <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> aux cell acc <span class="token operator">=</span> <span class="token keyword">match</span> cell <span class="token keyword">with</span>
+    <span class="token operator">|</span> Nil <span class="token operator">-&gt;</span> acc
+    <span class="token operator">|</span> Cons <span class="token punctuation">(</span>v<span class="token punctuation">,</span> succ<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">if</span> v <span class="token operator">&gt;=</span> <span class="token number">0</span> <span class="token keyword">then</span> aux succ <span class="token punctuation">(</span>acc<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token keyword">else</span> aux succ acc
+<span class="token keyword">in</span> aux c <span class="token number">0</span>
+  
+<span class="token keyword">let</span> creer_liste_tete n <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> aux a c <span class="token operator">=</span> <span class="token keyword">if</span> a<span class="token operator">=</span><span class="token number">1</span> <span class="token keyword">then</span> Cons<span class="token punctuation">(</span>a<span class="token punctuation">,</span>c<span class="token punctuation">)</span> <span class="token keyword">else</span> aux <span class="token punctuation">(</span>a<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">(</span>Cons<span class="token punctuation">(</span>a<span class="token punctuation">,</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+  <span class="token keyword">in</span> aux n Nil <span class="token punctuation">;;</span>
+  
+<span class="token keyword">let</span> creer_liste_queue <span class="token punctuation">(</span>n <span class="token punctuation">:</span> int<span class="token punctuation">)</span> <span class="token punctuation">:</span> int cellule <span class="token operator">=</span>
+  <span class="token keyword">let</span> <span class="token keyword">rec</span> aux count <span class="token operator">=</span> <span class="token keyword">if</span> count <span class="token operator">=</span> n <span class="token keyword">then</span> Cons<span class="token punctuation">(</span>n<span class="token punctuation">,</span> Nil<span class="token punctuation">)</span> <span class="token keyword">else</span> Cons<span class="token punctuation">(</span>count<span class="token punctuation">,</span> aux <span class="token punctuation">(</span>count <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">in</span> aux <span class="token number">1</span>
+  
+<span class="token keyword">let</span> <span class="token keyword">rec</span> est_croissante <span class="token punctuation">(</span>c <span class="token punctuation">:</span> int cellule<span class="token punctuation">)</span> <span class="token punctuation">:</span> bool <span class="token operator">=</span> <span class="token keyword">match</span> c <span class="token keyword">with</span>
+  <span class="token operator">|</span> Nil <span class="token operator">-&gt;</span> <span class="token boolean">true</span>
+  <span class="token operator">|</span> Cons <span class="token punctuation">(</span>v1<span class="token punctuation">,</span> succ<span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token keyword">match</span> succ <span class="token keyword">with</span>
+    <span class="token operator">|</span> Nil <span class="token operator">-&gt;</span> <span class="token boolean">true</span>
+    <span class="token operator">|</span> Cons <span class="token punctuation">(</span>v2<span class="token punctuation">,</span> <span class="token punctuation">_</span><span class="token punctuation">)</span> <span class="token operator">-&gt;</span> <span class="token punctuation">(</span>v1 <span class="token operator">&lt;=</span> v2<span class="token punctuation">)</span> <span class="token operator">&amp;&amp;</span> est_croissante succ
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h2 data-heading="II - Structures de données" id="II_-_Structures_de_données">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>II - Structures de données
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="A - Définitions" id="A_-_Définitions">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>A - Définitions
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définitions</div>
+              </div>
+              <div class="callout-content">
+                <p>La <strong>spécification d'une structure de données</strong> est la définition formelle de son comportement.</p>
+                <p>Une <strong>structure de données abstraites</strong> est un ensemble d'éléments muni d'opérations agissant sur ses éléments.</p>
+                <p>La <strong>spécification complète</strong> est composée de :</p>
+                <ul class="has-list-bullet">
+                  <li data-line="6">
+                    <div class="list-bullet"></div>la <em>définition</em> des opérations avec la signature
+                  </li>
+                  <li data-line="7">
+                    <div class="list-bullet"></div>des <em>axiomes</em> qui permettent de définir le comportement
+                  </li>
+                  <li data-line="8">
+                    <div class="list-bullet"></div>des <em>préconditions</em> si les opérations sont partiellement définies
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="B - Type abstrait tableau" id="B_-_Type_abstrait_tableau">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>B - Type abstrait tableau
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition : tableau</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <pre><code>tableau(T, n)
+T : le type des éléments du tableau
+n : un entier représentant le nombre d'éléments du tableau
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Opérations</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>fonction</th>
+                  <th>type</th>
+                  <th>documentation</th>
+                  <th>préconditions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em>create</em></td>
+                  <td><code>(n : int) -&gt; (x : T) -&gt; (t : tableau(T, n))</code></td>
+                  <td>crée un tableau de taille n et initialise les éléments à la valeur de x</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><em>get</em></td>
+                  <td><code>(t : tableau) -&gt; (i : int) -&gt; (x : T)</code></td>
+                  <td>renvoie x l'élément à la position i dans la tableau t</td>
+                  <td>i doit être un indice valide</td>
+                </tr>
+                <tr>
+                  <td><em>set</em></td>
+                  <td><code>(t : tableau) -&gt; (i : int) -&gt; (v : T) -&gt; (t : tableau)</code></td>
+                  <td>met à jour la valeur de l'élément à l'indice i du tableau t en lui assignant la valeur v</td>
+                  <td>i doit être un indice valide</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="tip" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-flame">
+                    <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Axiome</div>
+              </div>
+              <div class="callout-content">
+                <p>get(set(t, i, x), i) = x</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="C - Structure abstraite d'ensembles" id="C_-_Structure_abstraite_d'ensembles">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>C - Structure abstraite d'ensembles
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition : ensemble</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <pre><code>ensemble(T)
+T : le type des éléments de l'ensemble
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Opérations</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>fonction</th>
+                  <th>type</th>
+                  <th>documentation</th>
+                  <th>préconditions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><em>cardinal</em></td>
+                  <td><code>(E : ensemble) -&gt; (n : int)</code></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D436 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>n</mi>
+                            <mo>=</mo>
+                            <mi>C</mi>
+                            <mi>a</mi>
+                            <mi>r</mi>
+                            <mi>d</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>E</mi>
+                            <mo stretchy="false">)</mo>
+                          </math></mjx-assistive-mml></mjx-container></span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><em>add</em></td>
+                  <td><code>(x : T) -&gt; (E : ensemble) -&gt; (E' : ensemble)</code></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.051em;"><mjx-mo class="mjx-var" size="s"><mjx-c class="mjx-c2032"></mjx-c></mjx-mo></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c222A"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <msup>
+                              <mi>E</mi>
+                              <mo data-mjx-alternate="1">′</mo>
+                            </msup>
+                            <mo>=</mo>
+                            <mo fence="false" stretchy="false">{</mo>
+                            <mi>x</mi>
+                            <mo fence="false" stretchy="false">}</mo>
+                            <mo>∪</mo>
+                            <mi>E</mi>
+                          </math></mjx-assistive-mml></mjx-container></span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><em>member</em></td>
+                  <td><code>(E : ensemble) -&gt; (x : T) -&gt; bool</code></td>
+                  <td>vrai si <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>x</mi>
+                            <mo>∈</mo>
+                            <mi>E</mi>
+                          </math></mjx-assistive-mml></mjx-container></span></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td><em>remove</em></td>
+                  <td><code>(E : ensemble) -&gt; (x : T) -&gt; (E' : ensemble)</code></td>
+                  <td><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em; margin-left: 0.051em;"><mjx-mo class="mjx-var" size="s"><mjx-c class="mjx-c2032"></mjx-c></mjx-mo></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D438 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2216"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c7B"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D465 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c7D"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <msup>
+                              <mi>E</mi>
+                              <mo data-mjx-alternate="1">′</mo>
+                            </msup>
+                            <mo>=</mo>
+                            <mi>E</mi>
+                            <mo>∖</mo>
+                            <mo fence="false" stretchy="false">{</mo>
+                            <mi>x</mi>
+                            <mo fence="false" stretchy="false">}</mo>
+                          </math></mjx-assistive-mml></mjx-container></span></td>
+                  <td>l'ensemble n'est pas vide</td>
+                </tr>
+                <tr>
+                  <td><em>iter</em></td>
+                  <td><code>(T : unit) -&gt; (E : ensemble) -&gt; unit</code></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h2 data-heading="III - Structures de données séquentielles" id="III_-_Structures_de_données_séquentielles">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>III - Structures de données séquentielles
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="A - Structure de pile" id="A_-_Structure_de_pile">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>A - Structure de pile
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Principe</div>
+              </div>
+              <div class="callout-content">
+                <p>Le dernier objet ajouté est le premier à être retiré.<br>
+                  C'est la principe <strong>LIFO</strong> (<strong>L</strong>ast <strong>I</strong>n <strong>F</strong>irst <strong>O</strong>ut).</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Spécifications fonctionnelles</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">opérations</th>
+                  <th>type</th>
+                  <th>comportement</th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center"><em>pile_vide</em></td>
+                  <td><code>'a pile</code></td>
+                  <td>renvoie une pile vide</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td align="center"><em>est_vide</em></td>
+                  <td><code>'a pile -&gt; bool</code></td>
+                  <td>renvoie vrai ssi la pile est vide</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td align="center"><em>empiler</em></td>
+                  <td><code>'a -&gt; 'a pile -&gt; 'a pile</code></td>
+                  <td>renvoie une pile contenantle nouvel élément</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td align="center"><em>depiler</em></td>
+                  <td><code>'a pile -&gt; ('a * 'a pile)</code></td>
+                  <td>renvoie l'élément du sommet de la pile et le reste de la pile</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="question" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-help-circle">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Préconditions</div>
+              </div>
+              <div class="callout-content">
+                <p>On peut dépiler seulement si la pile n'est pas vide</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="B - Structure de file" id="B_-_Structure_de_file">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>B - Structure de file
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Principe</div>
+              </div>
+              <div class="callout-content">
+                <p>Le premier entré est le premier sorti.<br>
+                  C'est la principe <strong>FIFO</strong> (<strong>F</strong>irst <strong>I</strong>n <strong>F</strong>irst <strong>O</strong>ut).</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Spécifications fonctionnelles</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">opérations</th>
+                  <th>type</th>
+                  <th>comportement</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center"><em>file_vide</em></td>
+                  <td><code>'a file</code></td>
+                  <td>renvoie une file vide</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td align="center"><em>est_vide</em></td>
+                  <td><code>'a file -&gt; bool</code></td>
+                  <td>vrai ssi la file est vide</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td align="center"><em>enfiler</em></td>
+                  <td><code>'a -&gt; 'a file -&gt; 'a file</code></td>
+                  <td>fait entrer un élément dans la file</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td align="center"><em>defiler</em></td>
+                  <td><code>'a file -&gt; ('a * 'a file)</code></td>
+                  <td>renvoie l'élémentle plus proche de la sortie et la file sans cet élément</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3 data-heading="C - Exemple d'algorithmes" id="C_-_Exemple_d'algorithmes">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>C - Exemple d'algorithmes
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="Inverser l'ordre des éléments d'une file en utilisant une pile" id="Inverser_l'ordre_des_éléments_d'une_file_en_utilisant_une_pile">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Inverser l'ordre des éléments d'une file en utilisant une pile
+            </h4>
+          </div>
+          <div>
+            <p>P <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> pile_vide</p>
+          </div>
+          <div>
+            <p>tant que pas est_vide(F):<br>
+              e, F <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> defiler(F)<br>
+              P <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> empiler(e, P)</p>
+          </div>
+          <div>
+            <p>tant que pas est_vide(P):<br>
+              e, P <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> defiler(P)<br>
+              F <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c27F5"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mo stretchy="false">⟵</mo>
+                    </math></mjx-assistive-mml></mjx-container></span> enfiler(e, F)</p>
+          </div>
+          <div>
+            <p>retourner(F)</p>
+          </div>
+          <div>
+            <p>Q - T<br>
+              P - pile_vide()<br>
+              tant que pas est_vide (Q):<br>
+              E, Q - renvoyer_tete (Q)<br>
+              si E = ( ou si E = [ ou si ...:<br>
+              empiler E, P<br>
+              si E = ) ou ...:<br>
+              Si Est_vide(P) :<br>
+              retrourner(Faux)<br>
+              E2, P - depiler P<br>
+              si E != E2 :<br>
+              retourner Faux<br>
+              Si est_vide (P):<br>
+              retourner (Vrai)<br>
+              sinon : retourner (Faux)</p>
+          </div>
+          <div>
+            <h3 data-heading="D - File à double entrée (dequeue)" id="D_-_File_à_double_entrée_(dequeue)">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>D - File à double entrée (dequeue)
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Spécifications fonctionnelles</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">opérations</th>
+                  <th>type</th>
+                  <th>comportement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center"><em>dequeue_empty</em></td>
+                  <td><code>'a dequeue</code></td>
+                  <td>renvoie une dequeue vide</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>is_empty</em></td>
+                  <td><code>'a dequeue -&gt; bool</code></td>
+                  <td>vrai ssi la dequeue est vide</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>push_left</em></td>
+                  <td><code>'a -&gt; 'a dequeue -&gt; 'a dequeue</code></td>
+                  <td>insérer à gauche un élément</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>push_right</em></td>
+                  <td><code>'a dequeue -&gt; 'a -&gt; 'a dequeue</code></td>
+                  <td>insérer à droite un élément</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>pop_left</em></td>
+                  <td><code>'a dequeue -&gt; ('a * 'a dequeue)</code></td>
+                  <td>renvoie un couple élément de gauche et file sans cet élément</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>pop_right</em></td>
+                  <td><code>'a dequeue -&gt; ('a dequeue * 'a)</code></td>
+                  <td>renvoie un couple élément de droite et file sans cet élément</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3 data-heading="E - File à priorité" id="E_-_File_à_priorité">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>E - File à priorité
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition</div>
+              </div>
+              <div class="callout-content">
+                <p>Une <strong>file de priorité</strong> est une structure de données qui permet de gérer un ensemble d'élément dont chacun a une valeur associée appelée <strong>clé</strong>.<br>
+                  La <strong>clé</strong> est un élément d'un <em>ensemble totalement ordonné</em>.<br>
+                  Un élément est généralement une paire (clé, valeur).</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Spécifications fonctionnelles</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">opérations</th>
+                  <th align="left">type</th>
+                  <th>comportement</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center"><em>creer_file_priorite</em></td>
+                  <td align="left"><code>('a * 'b) fp</code></td>
+                  <td>renvoie une file à priorité vide</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>insérer</em></td>
+                  <td align="left"><code>('a * 'b) -&gt; ('a * 'b) fp -&gt; ('a * 'b) fp</code></td>
+                  <td>insère un nouvel élément dans la file à priorité</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>extraire_max</em></td>
+                  <td align="left"><code>('a * 'b) fp -&gt; (('a * 'b) * ('a * 'b) fp)</code></td>
+                  <td>renvoie l'élément de priorité max et l'enlève de la file à priorité</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>maximum</em></td>
+                  <td align="left"><code>('a * 'b) fp -&gt; ('a * 'b)</code></td>
+                  <td>renvoie la valeur de l'élément de priorité max sans modifier la file</td>
+                </tr>
+                <tr>
+                  <td align="center"><em>augmenter_cle</em></td>
+                  <td align="left"><code>('a * 'b) fp -&gt; 'a -&gt; 'a -&gt; ('a * 'b) fp</code></td>
+                  <td>modifie (augmente) la valeur de priorité d'un élément</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h2 data-heading="IV - Implémentations classiques" id="IV_-_Implémentations_classiques">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>IV - Implémentations classiques
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="A - Piles et files dans un tableau" id="A_-_Piles_et_files_dans_un_tableau">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>A - Piles et files dans un tableau
+            </h3>
+          </div>
+          <div>
+            <pre class="language-pseudo-code" tabindex="0"><code class="language-pseudo-code is-loaded">pile_vide(P)
+	si P.sommet = 0 alors Vrai
+	sinon Faux
+
+creer_pile(n)
+	P.n &lt;- n
+	P.sommet &lt;- 0
+	allouer(n)
+	renvoyer P
+
+empiler(P, e)
+	si P.sommet = P.n 
+		alors Erreur
+	sinon
+		P.sommet &lt;- P.sommet + 1
+		P[P.sommet] &lt;- e
+
+depiler(P)
+	si pile_vide(P)
+		alors Erreur
+	sinon
+		tmp &lt;- P[P.sommet]
+		P.sommet &lt;- P.sommet - 1
+		renvoyer tmp
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre class="language-pseudo-code" tabindex="0"><code class="language-pseudo-code is-loaded">enfiler(F, x)
+	si file_pleine(F)
+		alors Erreur
+	sinon
+		F.file_vide &lt;- Faux
+		F.tete &lt;- (F.tete +1) mod (F.n + 1)
+		F[F.queue] &lt;- x
+		Si F.queue + 1 = F.tete
+			F.est_plein &lt;- Vrai
+
+defiler(F)
+	si est_vide(F)
+		alors Erreur
+	sinon
+		E &lt;- F[tete]
+		tete &lt;- tete +1
+		si queue + 1 = tete
+			alors F.file_vide &lt;- true
+		si tete = n+1
+			alors tete &lt;- 1
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h3 data-heading="B - File avec deux piles" id="B_-_File_avec_deux_piles">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>B - File avec deux piles
+            </h3>
+          </div>
+          <div>
+            <pre class="language-pseudo-code" tabindex="0"><code class="language-pseudo-code is-loaded">F &lt;- (P1, P2)
+
+enfiler(F, e):
+	empiler(P1, e)
+
+file_vide(F):
+	renvoyer(est_vide(P1) et est_vide(P2))
+
+defiler(F):
+	si file_vide(F):
+		Erreur
+	sinon:
+		si pile_vide(P2):
+			tant que non(pile_vide(P1)):
+				empiler(P2, depiler(P1))
+		renvoyer(depiler(P2))
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Remarque</div>
+              </div>
+              <div class="callout-content">
+                <p>Le coût total d'une série de <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> opérations est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>O</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span>.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition</div>
+              </div>
+              <div class="callout-content">
+                <p>On définit la <strong>complexité amortie</strong> comme le coût moyen pour une série de plusieurs opérations.</p>
+                <p>Ici la complexité amortie de l'opération <code>defiler</code> est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>O</mi>
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="C - Tableaux redimensionnables" id="C_-_Tableaux_redimensionnables">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>C - Tableaux redimensionnables
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="1 - Spécifications" id="1_-_Spécifications">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1 - Spécifications
+            </h4>
+          </div>
+          <div>
+            <p>-&gt; voir exemple dans le sujet de DS 4</p>
+          </div>
+          <div>
+            <h4 data-heading="2 - Implémentation" id="2_-_Implémentation">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>2 - Implémentation
+            </h4>
+          </div>
+          <div>
+            <pre class="language-c" tabindex="0"><code class="language-c is-loaded"><span class="token keyword">typedef</span> <span class="token keyword">struct</span> <span class="token class-name">tab_s</span> <span class="token operator">=</span> <span class="token punctuation">{</span>
+	<span class="token keyword">int</span> capacite<span class="token punctuation">,</span>
+	<span class="token keyword">int</span> num<span class="token punctuation">,</span>
+	<span class="token keyword">int</span> <span class="token operator">*</span>donnees<span class="token punctuation">,</span>
+<span class="token punctuation">}</span> tableau<span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h4 data-heading="3 - Insérer un élément" id="3_-_Insérer_un_élément">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>3 - Insérer un élément
+            </h4>
+          </div>
+          <div>
+            <pre class="language-c" tabindex="0"><code class="language-c is-loaded"><span class="token keyword">void</span> <span class="token function">push_back</span><span class="token punctuation">(</span>tableau <span class="token operator">*</span>t<span class="token punctuation">,</span> <span class="token keyword">int</span> c<span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>t<span class="token operator">-&gt;</span>num <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        t<span class="token operator">-&gt;</span>donnees <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>t<span class="token operator">-&gt;</span>donnees <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            <span class="token function">exit</span><span class="token punctuation">(</span>EXIT_FAILURE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        t<span class="token operator">-&gt;</span>capacite <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        t<span class="token operator">-&gt;</span>num <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+        t<span class="token operator">-&gt;</span>donnees<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">else</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>t<span class="token operator">-&gt;</span>num <span class="token operator">&lt;</span> t<span class="token operator">-&gt;</span>capacite<span class="token punctuation">)</span>
+        <span class="token punctuation">{</span>
+            t<span class="token operator">-&gt;</span>donnees<span class="token punctuation">[</span>t<span class="token operator">-&gt;</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span>
+            t<span class="token operator">-&gt;</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">else</span>
+        <span class="token punctuation">{</span>
+            <span class="token keyword">int</span> <span class="token operator">*</span>nouveau <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword">int</span> <span class="token operator">*</span><span class="token punctuation">)</span><span class="token function">malloc</span><span class="token punctuation">(</span><span class="token keyword">sizeof</span><span class="token punctuation">(</span><span class="token keyword">int</span><span class="token punctuation">)</span> <span class="token operator">*</span> t<span class="token operator">-&gt;</span>capacite <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>nouveau <span class="token operator">==</span> <span class="token constant">NULL</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                <span class="token function">exit</span><span class="token punctuation">(</span>EXIT_FAILURE<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> t<span class="token operator">-&gt;</span>capacite<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+            <span class="token punctuation">{</span>
+                nouveau<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> t<span class="token operator">-&gt;</span>donnees<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+            <span class="token function">free</span><span class="token punctuation">(</span>t<span class="token operator">-&gt;</span>donnees<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            t<span class="token operator">-&gt;</span>donnees <span class="token operator">=</span> nouveau<span class="token punctuation">;</span>
+            t<span class="token operator">-&gt;</span>capacite <span class="token operator">=</span> t<span class="token operator">-&gt;</span>capacite <span class="token operator">*</span> <span class="token number">2</span><span class="token punctuation">;</span>
+            t<span class="token operator">-&gt;</span>donnees<span class="token punctuation">[</span>t<span class="token operator">-&gt;</span>num<span class="token punctuation">]</span> <span class="token operator">=</span> x<span class="token punctuation">;</span>
+            t<span class="token operator">-&gt;</span>num<span class="token operator">++</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h4 data-heading="4 - Calcul de la complexité amortie pour n opérations" id="4_-_Calcul_de_la_complexité_amortie_pour_n_opérations">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>4 - Calcul de la complexité amortie pour n opérations
+            </h4>
+          </div>
+          <div>
+            <p>Complexité amortie pour <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>n</mi>
+                    </math></mjx-assistive-mml></mjx-container></span> opérations :</p>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c7B TEX-S3"></mjx-c></mjx-mo><mjx-mtable style="min-width: 8.065em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: left; padding-right: 0.5em; padding-bottom: 0.1em;"><mjx-mtext class="mjx-n"><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0.5em; padding-bottom: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-msup space="4"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2192"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: left; padding-right: 0.5em; padding-top: 0.1em;"><mjx-mtext class="mjx-n"><mjx-c class="mjx-c73"></mjx-c><mjx-c class="mjx-c69"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c6E"></mjx-c><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-tstrut></mjx-tstrut></mjx-mtd><mjx-mtd style="text-align: left; padding-left: 0.5em; padding-top: 0.1em;"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-mo class="mjx-n" style="vertical-align: 0.25em;"></mjx-mo></mjx-mrow></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mrow data-mjx-texclass="INNER">
+                        <mo data-mjx-texclass="OPEN">{</mo>
+                        <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+                          <mtr>
+                            <mtd>
+                              <mtext>si&nbsp;</mtext>
+                            </mtd>
+                            <mtd>
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <msup>
+                                <mn>2</mn>
+                                <mrow data-mjx-texclass="ORD">
+                                  <mi>k</mi>
+                                </mrow>
+                              </msup>
+                              <mo stretchy="false">→</mo>
+                              <mi>i</mi>
+                            </mtd>
+                          </mtr>
+                          <mtr>
+                            <mtd>
+                              <mtext>sinon&nbsp;</mtext>
+                            </mtd>
+                            <mtd>
+                              <mn>1</mn>
+                            </mtd>
+                          </mtr>
+                        </mtable>
+                        <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+                      </mrow>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-munderover space="2"><mjx-over style="padding-bottom: 0.192em; padding-left: 0.362em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.046em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-munderover space="2"><mjx-over style="padding-bottom: 0.111em;"><mjx-texatom size="s" texclass="ORD"><mjx-mo class="mjx-n"><mjx-c class="mjx-c230A"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c230B"></mjx-c></mjx-mo></mjx-texatom></mjx-over><mjx-box><mjx-munder><mjx-row><mjx-base style="padding-left: 0.509em;"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo></mjx-base></mjx-row><mjx-row><mjx-under style="padding-top: 0.167em; padding-left: 0.401em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-under></mjx-row></mjx-munder></mjx-box></mjx-munderover><mjx-msup space="2"><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-script style="vertical-align: 0.363em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D458 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msup><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>a</mi>
+                      <munderover>
+                        <mo data-mjx-texclass="OP" movablelimits="false">∑</mo>
+                        <mrow data-mjx-texclass="ORD">
+                          <mi>i</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mrow data-mjx-texclass="ORD">
+                          <mi>n</mi>
+                        </mrow>
+                      </munderover>
+                      <mi>i</mi>
+                      <mo>+</mo>
+                      <mi>b</mi>
+                      <munderover>
+                        <mo data-mjx-texclass="OP" movablelimits="false">∑</mo>
+                        <mrow data-mjx-texclass="ORD">
+                          <mi>k</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </mrow>
+                        <mrow data-mjx-texclass="ORD">
+                          <mo fence="false" stretchy="false">⌊</mo>
+                          <mi>log</mi>
+                          <mo data-mjx-texclass="NONE">⁡</mo>
+                          <mi>n</mi>
+                          <mo fence="false" stretchy="false">⌋</mo>
+                        </mrow>
+                      </munderover>
+                      <msup>
+                        <mn>2</mn>
+                        <mrow data-mjx-texclass="ORD">
+                          <mi>k</mi>
+                        </mrow>
+                      </msup>
+                      <mo>=</mo>
+                      <mn>2</mn>
+                      <mi>n</mi>
+                      <mo>−</mo>
+                      <mn>1</mn>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2264"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c32"></mjx-c></mjx-mn><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>T</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mi>a</mi>
+                      <mi>n</mi>
+                      <mo>+</mo>
+                      <mi>b</mi>
+                      <mo stretchy="false">(</mo>
+                      <mn>2</mn>
+                      <mi>n</mi>
+                      <mo>−</mo>
+                      <mn>1</mn>
+                      <mo stretchy="false">)</mo>
+                      <mo>≤</mo>
+                      <mi>a</mi>
+                      <mi>n</mi>
+                      <mo>+</mo>
+                      <mn>2</mn>
+                      <mi>b</mi>
+                      <mi>n</mi>
+                      <mo>=</mo>
+                      <mi>n</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>a</mi>
+                      <mo>+</mo>
+                      <mn>2</mn>
+                      <mi>b</mi>
+                      <mo stretchy="false">)</mo>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mrow space="2"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c28 TEX-S1"></mjx-c></mjx-mo><mjx-mo class="mjx-n"><mjx-c class="mjx-c2308"></mjx-c></mjx-mo><mjx-mfrac><mjx-frac><mjx-num><mjx-nstrut></mjx-nstrut><mjx-mi class="mjx-i" size="s"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-num><mjx-dbox><mjx-dtable><mjx-line></mjx-line><mjx-row><mjx-den><mjx-dstrut></mjx-dstrut><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac><mjx-mo class="mjx-n"><mjx-c class="mjx-c2309"></mjx-c></mjx-mo><mjx-mo class="mjx-sop"><mjx-c class="mjx-c29 TEX-S1"></mjx-c></mjx-mo></mjx-mrow><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>T</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>n</mi>
+                      <mo stretchy="false">)</mo>
+                      <mo>=</mo>
+                      <mi>T</mi>
+                      <mrow data-mjx-texclass="INNER">
+                        <mo data-mjx-texclass="OPEN">(</mo>
+                        <mo fence="false" stretchy="false">⌈</mo>
+                        <mfrac>
+                          <mi>n</mi>
+                          <mn>2</mn>
+                        </mfrac>
+                        <mo fence="false" stretchy="false">⌉</mo>
+                        <mo data-mjx-texclass="CLOSE">)</mo>
+                      </mrow>
+                      <mo>+</mo>
+                      <mn>1</mn>
+                    </math></mjx-assistive-mml></mjx-container></span> est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-n"><mjx-c class="mjx-c398"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-n"><mjx-c class="mjx-c6C"></mjx-c><mjx-c class="mjx-c6F"></mjx-c><mjx-c class="mjx-c67"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2061"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi mathvariant="normal">Θ</mi>
+                      <mo stretchy="false">(</mo>
+                      <mi>log</mi>
+                      <mo data-mjx-texclass="NONE">⁡</mo>
+                      <mi>n</mi>
+                      <mo stretchy="false">)</mo>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div class="mod-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar" class="sidebar-right">
+      <div class="sidebar-content">
+        <div class="outline-container" data-size="0">
+          <div class="outline-header">
+            <h6 style="margin: 1em 1em 1em 0px;">Table of Contents</h6><button class="clickable-icon collapse-all"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button>
+          </div>
+          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Chapitre_9_-_Structures_de_données">
+              <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div><span class="outline-item-title">Chapitre 9 - Structures de données</span>
+            </a>
+            <div class="outline-item-children">
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#I_-_Les_listes_chaînées">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">I - Les listes chaînées</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#A_-_Présentation">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">A - Présentation</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#B_-_Représentation">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">B - Représentation</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#C_-_Opérations">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">C - Opérations</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1_-_Créer_une_liste_vide">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1 - Créer une liste vide</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#2_-_Insérer_un_élément_en_tête">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">2 - Insérer un élément en tête</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#3_-_Supprimer_l'élément_en_tête">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">3 - Supprimer l'élément en tête</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#D_-_Algorithmes">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">D - Algorithmes</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1_-_Compter_le_nombre_d'éléments_positifs_d'une_liste_chaînée">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1 - Compter le nombre d'éléments positifs d'une liste chaînée</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#2_-_Construire_une_liste_contenant_les_entiers_de_1_à_n,_par_ajout_en_queue">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">2 - Construire une liste contenant les entiers de 1 à n, par ajout en queue</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#3_-_Construire_une_liste_contenant_les_entiers_de_1_à_n,_par_ajout_en_tête">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">3 - Construire une liste contenant les entiers de 1 à n, par ajout en tête</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#4_-_Ecrire_une_fonction_est_croissante_(T)">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">4 - Ecrire une fonction est croissante (T)</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#E_-_Exemples_d'implémentation">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">E - Exemples d'implémentation</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#II_-_Structures_de_données">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">II - Structures de données</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#A_-_Définitions">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">A - Définitions</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#B_-_Type_abstrait_tableau">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">B - Type abstrait tableau</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#C_-_Structure_abstraite_d'ensembles">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">C - Structure abstraite d'ensembles</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#III_-_Structures_de_données_séquentielles">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">III - Structures de données séquentielles</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#A_-_Structure_de_pile">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">A - Structure de pile</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#B_-_Structure_de_file">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">B - Structure de file</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#C_-_Exemple_d'algorithmes">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">C - Exemple d'algorithmes</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#Inverser_l'ordre_des_éléments_d'une_file_en_utilisant_une_pile">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">Inverser l'ordre des éléments d'une file en utilisant une pile</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#D_-_File_à_double_entrée_(dequeue)">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">D - File à double entrée (dequeue)</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#E_-_File_à_priorité">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">E - File à priorité</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#IV_-_Implémentations_classiques">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">IV - Implémentations classiques</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#A_-_Piles_et_files_dans_un_tableau">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">A - Piles et files dans un tableau</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#B_-_File_avec_deux_piles">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">B - File avec deux piles</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#C_-_Tableaux_redimensionnables">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">C - Tableaux redimensionnables</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1_-_Spécifications">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1 - Spécifications</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#2_-_Implémentation">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">2 - Implémentation</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#3_-_Insérer_un_élément">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">3 - Insérer un élément</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#4_-_Calcul_de_la_complexité_amortie_pour_n_opérations">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">4 - Calcul de la complexité amortie pour n opérations</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

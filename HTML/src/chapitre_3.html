@@ -1,0 +1,2217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Chapitre_3</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+
+  <link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+  <script src="https://pixijs.download/v7.2.4/pixi.js"></script>
+
+
+  <link rel="stylesheet" href="../styles/obsidian-styles.css">
+  <link rel="stylesheet" href="../styles/plugin-styles.css">
+  <link rel="stylesheet" href="../styles/theme.css">
+  <link rel="stylesheet" href="../styles/snippets.css">
+
+  <style> </style>
+  <style>
+    mjx-container[jax="CHTML"] {
+      line-height: 0;
+    }
+
+    mjx-container [space="1"] {
+      margin-left: .111em;
+    }
+
+    mjx-container [space="2"] {
+      margin-left: .167em;
+    }
+
+    mjx-container [space="3"] {
+      margin-left: .222em;
+    }
+
+    mjx-container [space="4"] {
+      margin-left: .278em;
+    }
+
+    mjx-container [space="5"] {
+      margin-left: .333em;
+    }
+
+    mjx-container [rspace="1"] {
+      margin-right: .111em;
+    }
+
+    mjx-container [rspace="2"] {
+      margin-right: .167em;
+    }
+
+    mjx-container [rspace="3"] {
+      margin-right: .222em;
+    }
+
+    mjx-container [rspace="4"] {
+      margin-right: .278em;
+    }
+
+    mjx-container [rspace="5"] {
+      margin-right: .333em;
+    }
+
+    mjx-container [size="s"] {
+      font-size: 70.7%;
+    }
+
+    mjx-container [size="ss"] {
+      font-size: 50%;
+    }
+
+    mjx-container [size="Tn"] {
+      font-size: 60%;
+    }
+
+    mjx-container [size="sm"] {
+      font-size: 85%;
+    }
+
+    mjx-container [size="lg"] {
+      font-size: 120%;
+    }
+
+    mjx-container [size="Lg"] {
+      font-size: 144%;
+    }
+
+    mjx-container [size="LG"] {
+      font-size: 173%;
+    }
+
+    mjx-container [size="hg"] {
+      font-size: 207%;
+    }
+
+    mjx-container [size="HG"] {
+      font-size: 249%;
+    }
+
+    mjx-container [width="full"] {
+      width: 100%;
+    }
+
+    mjx-box {
+      display: inline-block;
+    }
+
+    mjx-block {
+      display: block;
+    }
+
+    mjx-itable {
+      display: inline-table;
+    }
+
+    mjx-row {
+      display: table-row;
+    }
+
+    mjx-row>* {
+      display: table-cell;
+    }
+
+    mjx-mtext {
+      display: inline-block;
+    }
+
+    mjx-mstyle {
+      display: inline-block;
+    }
+
+    mjx-merror {
+      display: inline-block;
+      color: red;
+      background-color: yellow;
+    }
+
+    mjx-mphantom {
+      visibility: hidden;
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root mjx-container {
+      will-change: opacity;
+    }
+
+    mjx-assistive-mml {
+      position: absolute !important;
+      top: 0px;
+      left: 0px;
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 1px 0px 0px 0px !important;
+      border: 0px !important;
+      display: block !important;
+      width: auto !important;
+      overflow: hidden !important;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    mjx-assistive-mml[display="block"] {
+      width: 100% !important;
+    }
+
+    mjx-math {
+      display: inline-block;
+      text-align: left;
+      line-height: 0;
+      text-indent: 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 100%;
+      font-size-adjust: none;
+      letter-spacing: normal;
+      border-collapse: collapse;
+      word-wrap: normal;
+      word-spacing: normal;
+      white-space: nowrap;
+      direction: ltr;
+      padding: 1px 0;
+    }
+
+    mjx-container[jax="CHTML"][display="true"] {
+      display: block;
+      text-align: center;
+      margin: 1em 0;
+    }
+
+    mjx-container[jax="CHTML"][display="true"][width="full"] {
+      display: flex;
+    }
+
+    mjx-container[jax="CHTML"][display="true"] mjx-math {
+      padding: 0;
+    }
+
+    mjx-container[jax="CHTML"][justify="left"] {
+      text-align: left;
+    }
+
+    mjx-container[jax="CHTML"][justify="right"] {
+      text-align: right;
+    }
+
+    mjx-mo {
+      display: inline-block;
+      text-align: left;
+    }
+
+    mjx-stretchy-h {
+      display: inline-table;
+      width: 100%;
+    }
+
+    mjx-stretchy-h>* {
+      display: table-cell;
+      width: 0;
+    }
+
+    mjx-stretchy-h>*>mjx-c {
+      display: inline-block;
+      transform: scalex(1.0000001);
+    }
+
+    mjx-stretchy-h>*>mjx-c::before {
+      display: inline-block;
+      width: initial;
+    }
+
+    mjx-stretchy-h>mjx-ext {
+      /* IE */
+      overflow: hidden;
+      /* others */
+      overflow: clip visible;
+      width: 100%;
+    }
+
+    mjx-stretchy-h>mjx-ext>mjx-c::before {
+      transform: scalex(500);
+    }
+
+    mjx-stretchy-h>mjx-ext>mjx-c {
+      width: 0;
+    }
+
+    mjx-stretchy-h>mjx-beg>mjx-c {
+      margin-right: -.1em;
+    }
+
+    mjx-stretchy-h>mjx-end>mjx-c {
+      margin-left: -.1em;
+    }
+
+    mjx-stretchy-v {
+      display: inline-block;
+    }
+
+    mjx-stretchy-v>* {
+      display: block;
+    }
+
+    mjx-stretchy-v>mjx-beg {
+      height: 0;
+    }
+
+    mjx-stretchy-v>mjx-end>mjx-c {
+      display: block;
+    }
+
+    mjx-stretchy-v>*>mjx-c {
+      transform: scaley(1.0000001);
+      transform-origin: left center;
+      overflow: hidden;
+    }
+
+    mjx-stretchy-v>mjx-ext {
+      display: block;
+      height: 100%;
+      box-sizing: border-box;
+      border: 0px solid transparent;
+      /* IE */
+      overflow: hidden;
+      /* others */
+      overflow: visible clip;
+    }
+
+    mjx-stretchy-v>mjx-ext>mjx-c::before {
+      width: initial;
+      box-sizing: border-box;
+    }
+
+    mjx-stretchy-v>mjx-ext>mjx-c {
+      transform: scaleY(500) translateY(.075em);
+      overflow: visible;
+    }
+
+    mjx-mark {
+      display: inline-block;
+      height: 0px;
+    }
+
+    mjx-c {
+      display: inline-block;
+    }
+
+    mjx-utext {
+      display: inline-block;
+      padding: .75em 0 .2em 0;
+    }
+
+    mjx-c::before {
+      display: block;
+      width: 0;
+    }
+
+    .MJX-TEX {
+      font-family: MJXZERO, MJXTEX;
+    }
+
+    .TEX-B {
+      font-family: MJXZERO, MJXTEX-B;
+    }
+
+    .TEX-I {
+      font-family: MJXZERO, MJXTEX-I;
+    }
+
+    .TEX-MI {
+      font-family: MJXZERO, MJXTEX-MI;
+    }
+
+    .TEX-BI {
+      font-family: MJXZERO, MJXTEX-BI;
+    }
+
+    .TEX-S1 {
+      font-family: MJXZERO, MJXTEX-S1;
+    }
+
+    .TEX-S2 {
+      font-family: MJXZERO, MJXTEX-S2;
+    }
+
+    .TEX-S3 {
+      font-family: MJXZERO, MJXTEX-S3;
+    }
+
+    .TEX-S4 {
+      font-family: MJXZERO, MJXTEX-S4;
+    }
+
+    .TEX-A {
+      font-family: MJXZERO, MJXTEX-A;
+    }
+
+    .TEX-C {
+      font-family: MJXZERO, MJXTEX-C;
+    }
+
+    .TEX-CB {
+      font-family: MJXZERO, MJXTEX-CB;
+    }
+
+    .TEX-FR {
+      font-family: MJXZERO, MJXTEX-FR;
+    }
+
+    .TEX-FRB {
+      font-family: MJXZERO, MJXTEX-FRB;
+    }
+
+    .TEX-SS {
+      font-family: MJXZERO, MJXTEX-SS;
+    }
+
+    .TEX-SSB {
+      font-family: MJXZERO, MJXTEX-SSB;
+    }
+
+    .TEX-SSI {
+      font-family: MJXZERO, MJXTEX-SSI;
+    }
+
+    .TEX-SC {
+      font-family: MJXZERO, MJXTEX-SC;
+    }
+
+    .TEX-T {
+      font-family: MJXZERO, MJXTEX-T;
+    }
+
+    .TEX-V {
+      font-family: MJXZERO, MJXTEX-V;
+    }
+
+    .TEX-VB {
+      font-family: MJXZERO, MJXTEX-VB;
+    }
+
+    mjx-stretchy-v mjx-c,
+    mjx-stretchy-h mjx-c {
+      font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+    }
+
+    @font-face
+
+    /* 0 */
+      {
+      font-family: MJXZERO;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 1 */
+      {
+      font-family: MJXTEX;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 2 */
+      {
+      font-family: MJXTEX-B;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 3 */
+      {
+      font-family: MJXTEX-I;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 4 */
+      {
+      font-family: MJXTEX-MI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 5 */
+      {
+      font-family: MJXTEX-BI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 6 */
+      {
+      font-family: MJXTEX-S1;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 7 */
+      {
+      font-family: MJXTEX-S2;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 8 */
+      {
+      font-family: MJXTEX-S3;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 9 */
+      {
+      font-family: MJXTEX-S4;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 10 */
+      {
+      font-family: MJXTEX-A;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 11 */
+      {
+      font-family: MJXTEX-C;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 12 */
+      {
+      font-family: MJXTEX-CB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 13 */
+      {
+      font-family: MJXTEX-FR;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 14 */
+      {
+      font-family: MJXTEX-FRB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 15 */
+      {
+      font-family: MJXTEX-SS;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 16 */
+      {
+      font-family: MJXTEX-SSB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 17 */
+      {
+      font-family: MJXTEX-SSI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 18 */
+      {
+      font-family: MJXTEX-SC;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 19 */
+      {
+      font-family: MJXTEX-T;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 20 */
+      {
+      font-family: MJXTEX-V;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 21 */
+      {
+      font-family: MJXTEX-VB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+    }
+
+    mjx-c.mjx-c27F5::before {
+      padding: 0.511em 1.609em 0.011em 0;
+      content: "\27F5";
+    }
+  </style>
+
+
+  <script id="relative-paths">
+    let rootPath = "..";
+    let mediaPath = "../media";
+    let jsPath = "../scripts";
+    let cssPath = "../styles";
+  </script>
+
+  <script>
+    async function loadDocument(url, pushHistory = true) {
+      let response;
+      try {
+        response = await fetch(url);
+      } catch (error) {
+        console.log("Cannot use fetch API (likely due to CORS), just loading the page normally.");
+        window.location.assign(url);
+        return;
+      }
+
+      let doc = document.implementation.createHTMLDocument();
+
+
+
+      deinitializePage();
+
+      if (response.ok) {
+        let html = (await response.text()).replaceAll("<!DOCTYPE html>", "").replaceAll("<html>", "").replaceAll("</html>", "");
+        doc.documentElement.innerHTML = html;
+
+        document.querySelector(".center-content").innerHTML = doc.querySelector(".center-content").innerHTML;
+        document.querySelector(".outline-container").innerHTML = doc.querySelector(".outline-container").innerHTML;
+        document.title = doc.title;
+
+        let pathsCode = doc.querySelector("#relative-paths").textContent;
+        // get a list of strings contained inside of ""
+        let paths = pathsCode.match(/"(.*?)"/g).map(function(val) {
+          return val.replace(/"/g, "");
+        });
+        rootPath = paths[0];
+        mediaPath = paths[1];
+        jsPath = paths[2];
+        cssPath = paths[3];
+
+        let splitURL = url.split("#");
+        let pathnameTarget = splitURL[0] ?? url;
+        let headingTarget = splitURL.length > 1 ? splitURL[1] : null;
+
+        // if the url has a heading, scroll to it
+        if (headingTarget) document.getElementById(headingTarget).scrollIntoView();
+
+        if (pushHistory) window.history.pushState({
+          path: pathnameTarget
+        }, '', pathnameTarget);
+      } else {
+        // if the page is not able to load instead add a header saying the page doesn't exist
+        document.querySelector(".markdown-preview-view").innerHTML =
+          `
+		<div>
+			<center style='position: relative; transform: translateY(20vh); width: 100%; text-align: center;'>
+				<h1 style>Page does not exist!</h1>
+			</center>
+		</div>
+		`;
+
+        document.querySelector(".outline-container").innerHTML = "";
+
+        document.title = "Page Not Found";
+
+        if (pushHistory) window.history.pushState({
+          path: window.location.pathname
+        }, '', window.location.pathname);
+      }
+
+      initializePage();
+
+      return doc;
+    }
+
+    //#region Initialization
+
+    function setupThemeToggle() {
+      console.log("Setting up theme toggle");
+
+      if (localStorage.getItem("theme_toggle") != null) {
+        setThemeToggle(localStorage.getItem("theme_toggle") == "true");
+      }
+
+      var lastScheme = "theme-dark";
+      // change theme to match current system theme
+      if (localStorage.getItem("theme_toggle") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        setThemeToggle(true);
+        lastScheme = "theme-light";
+      }
+      if (localStorage.getItem("theme_toggle") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setThemeToggle(true);
+        lastScheme = "theme-dark";
+      }
+
+      // set initial toggle state based on body theme class
+      if ($("body").hasClass("theme-light")) {
+        setThemeToggle(true);
+      } else {
+        setThemeToggle(false);
+      }
+
+      function setThemeToggle(state, instant = false) {
+        $(".toggle__input").each(function() {
+          $(this).prop("checked", state);
+        });
+
+        if (!$(".toggle__input").hasClass("is-checked") && state) {
+          $(".toggle__input").addClass("is-checked");
+        } else if ($(".toggle__input").hasClass("is-checked") && !state) {
+          $(".toggle__input").removeClass("is-checked");
+        }
+
+        if (!state) {
+          if ($("body").hasClass("theme-light")) {
+            $("body").removeClass("theme-light");
+          }
+
+          if (!$("body").hasClass("theme-dark")) {
+            $("body").addClass("theme-dark");
+          }
+        } else {
+          if ($("body").hasClass("theme-dark")) {
+            $("body").removeClass("theme-dark");
+          }
+
+          if (!$("body").hasClass("theme-light")) {
+            $("body").addClass("theme-light");
+          }
+        }
+
+        localStorage.setItem("theme_toggle", state ? "true" : "false");
+      }
+
+      $(".toggle__input").on("click tap", function() {
+        setThemeToggle(!(localStorage.getItem("theme_toggle") == "true"));
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        // return if we are printing
+        if (window.matchMedia('print').matches) {
+          printing = true;
+          return;
+        }
+
+        let newColorScheme = event.matches ? "theme-dark" : "theme-light";
+
+        if (newColorScheme == lastScheme) return;
+
+        if (newColorScheme == "theme-dark") {
+          setThemeToggle(false);
+        }
+
+        if (newColorScheme == "theme-light") {
+          setThemeToggle(true);
+        }
+
+        lastScheme = newColorScheme;
+      });
+    }
+
+    function setupHeaders() {
+      // MAKE HEADERS COLLAPSIBLE
+      // if "heading-collapse-indicator" is clicked, toggle the display of every div until the next heading of the same or lower level
+      function getHeadingContentsSelector(header) {
+        let headingLevel = $(header).children().first().prop("tagName").toLowerCase();
+        let headingNumber = parseInt(headingLevel.replace("h", ""));
+
+        let endingHeadings = [1, 2, 3, 4, 5, 6].filter(function(item) {
+          return item <= headingNumber;
+        }).map(function(item) {
+          return `div:has(h${item})`;
+        });
+
+        let endingHeadingsSelector = endingHeadings.join(", ");
+
+        return endingHeadingsSelector;
+      }
+
+      function setHeaderCollapse(header, collapse) {
+        let selector = getHeadingContentsSelector($(header));
+
+        if (!collapse) {
+          if ($(header).hasClass("is-collapsed")) $(header).toggleClass("is-collapsed");
+
+          $(header).nextUntil(selector).show();
+
+          // close headers inside of this one that are collapsed
+          $(header).nextUntil(selector).each(function() {
+            if ($(this).hasClass("is-collapsed"))
+              setHeaderCollapse($(this), true);
+          });
+
+          //open headers above this one that are collapsed
+          lastHeaderSize = $(header).children().first().prop("tagName").toLowerCase().replace("h", "");
+          $(header).prevAll().each(function() {
+            if ($(this).hasClass("is-collapsed") && $(this).has("h1, h2, h3, h4, h5, h6")) {
+              let hSize = $(this).children().first().prop("tagName").toLowerCase().replace("h", "");
+              if (hSize < lastHeaderSize) {
+                setHeaderCollapse($(this), false);
+                lastHeaderSize = hSize;
+              }
+            }
+          });
+        } else {
+          if (!$(header).hasClass("is-collapsed")) $(header).toggleClass("is-collapsed");
+          $(header).nextUntil(selector).hide();
+        }
+      }
+
+      $(".heading-collapse-indicator").on("click tap", function() {
+        var isCollapsed = $(this).parent().parent().hasClass("is-collapsed");
+        setHeaderCollapse($(this).parent().parent(), !isCollapsed);
+      });
+
+      // unfold header when an internal link that points to that header is clicked
+      $(".internal-link").on("click tap", function() {
+        let target = $(this).attr("href");
+
+        // if the target is a header uncollapse it
+        if (target.startsWith("#")) {
+          let header = $(document.getElementById(target.substring(1)));
+
+          setHeaderCollapse($(header).parent(), false);
+        }
+
+      });
+    }
+
+    function setupOutline() {
+      // MAKE OUTLINE COLLAPSIBLE
+      // if "outline-header" is clicked, toggle the display of every div until the next heading of the same or lower level
+      function setOutlineCollapse(header, collapse) {
+        if (collapse) {
+          if (!$(header).hasClass("is-collapsed"))
+            $(header).addClass("is-collapsed");
+
+          $(header).children(".outline-item-children").slideUp(120);
+        } else {
+          if ($(header).hasClass("is-collapsed"))
+            $(header).removeClass("is-collapsed");
+
+          $(header).children(".outline-item-children").slideDown(120);
+        }
+      }
+
+      function toggleOutlineCollapse(header) {
+        let isCollapsed = $(header).hasClass("is-collapsed");
+        setOutlineCollapse(header, !isCollapsed);
+      }
+
+      $(".outline-item-contents > .collapse-icon").on("click tap", function(e) {
+        toggleOutlineCollapse($(this).parent().parent());
+
+        // Prevent the collapse button from triggering the parent <a> tag navigation.
+        // fix implented by 'zombony' from GitHub
+        return false;
+      });
+
+      $(".collapse-all").on("click tap", function() {
+        let button = $(this);
+        $(".outline-container div.outline-item").each(function() {
+          setOutlineCollapse($(this), !button.hasClass("is-collapsed"));
+        });
+
+        button.toggleClass("is-collapsed");
+
+        button.find("iconify-icon").attr("icon", button.hasClass("is-collapsed") ? "ph:arrows-out-line-horizontal-bold" : "ph:arrows-in-line-horizontal-bold");
+      });
+
+      // hide the control button if the header has no children
+      $(".outline-item-children:not(:has(*))").each(function() {
+        $(this).parent().find(".collapse-icon").hide();
+      });
+    }
+
+    function setupCallouts() {
+      // MAKE CALLOUTS COLLAPSIBLE
+      // if the callout title is clicked, toggle the display of .callout-content
+      $(".callout.is-collapsible .callout-title").on("click tap", function() {
+        var isCollapsed = $(this).parent().hasClass("is-collapsed");
+
+        if (isCollapsed) {
+          $(this).parent().toggleClass("is-collapsed");
+        }
+
+        $(this).parent().find(".callout-content").slideToggle(duration = 100, complete = function() {
+          if (!isCollapsed) {
+            $(this).parent().toggleClass("is-collapsed");
+          }
+        });
+      });
+    }
+
+    function setupCheckboxes() {
+      // Fix checkboxed toggling .is-checked
+      $(".task-list-item-checkbox").on("click tap", function() {
+        $(this).parent().toggleClass("is-checked");
+        $(this).parent().attr("data-task", $(this).parent().hasClass("is-checked") ? "x" : " ");
+      });
+
+      $(`.plugin-tasks-list-item input[type="checkbox"]`).each(function() {
+        $(this).prop("checked", $(this).parent().hasClass("is-checked"));
+      });
+
+      $('.kanban-plugin__item.is-complete').each(function() {
+        $(this).find('input[type="checkbox"]').prop("checked", true);
+      });
+    }
+
+    function setupCanvas() {
+      let focusedNode = null;
+
+      // make canvas nodes selectable
+      $(".canvas-node-content-blocker").on("click tap", function() {
+        $(this).parent().parent().toggleClass("is-focused");
+        $(this).hide();
+
+        if (focusedNode) {
+          focusedNode.removeClass("is-focused");
+          $(focusedNode).find(".canvas-node-content-blocker").show();
+        }
+
+        focusedNode = $(this).parent().parent();
+      });
+
+      // make canvas node deselect when clicking outside
+      $(document).on("click tap", function(event) {
+        if (!$(event.target).closest(".canvas-node").length) {
+          $(".canvas-node").removeClass("is-focused");
+          $(".canvas-node-content-blocker").show();
+        }
+      });
+    }
+
+    function setupCodeblocks() {
+      // make code snippet block copy button copy the code to the clipboard
+      $(".copy-code-button").on("click tap", function() {
+        let code = $(this).parent().find("code").text();
+        navigator.clipboard.writeText(code);
+        $(this).text("Copied!");
+        // set a timeout to change the text back
+        setTimeout(function() {
+          $(".copy-code-button").text("Copy");
+        }, 2000);
+      });
+    }
+
+    function setupLinks() {
+      $(".internal-link, .footnote-link").on("click tap", function() {
+        let target = $(this).attr("href");
+
+        // this is linking to a different page
+        if (!target.startsWith("#")) {
+          console.log("Loading document: " + target);
+          // if the target is not a header, load the page
+          loadDocument(target);
+
+          // make sure link doesn't redirect
+          return false;
+        } else {
+          document.getElementById(target.substring(1)).scrollIntoView();
+          return false;
+        }
+      });
+
+      window.onpopstate = function(event) {
+        loadDocument(window.location.pathname, false);
+      }
+    }
+
+    function initializePage() {
+      setupThemeToggle();
+      setupHeaders();
+      setupOutline();
+      setupCallouts();
+      setupCheckboxes();
+      setupCanvas();
+      setupCodeblocks();
+      setupLinks();
+    }
+
+    function deinitializePage() {
+      // remove all event listeners
+      $(".toggle__input").off("click tap");
+      $(".callout.is-collapsible .callout-title").off("click tap");
+      $(".heading-collapse-indicator").off("click tap");
+      $(".outline-item-contents > .collapse-icon").off("click tap");
+      $(".collapse-all").off("click tap");
+      $(".task-list-item-checkbox").off("click tap");
+      $(".copy-code-button").off("click tap");
+      $(".canvas-node-content-blocker").off("click tap");
+      $("center-content").find("*").off("click tap");
+    }
+
+    //#endregion
+
+    jQuery(initializePage);
+  </script>
+
+</head>
+
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app show-inline-title show-view-header is-maximized" style="--zoom-factor:1; --font-text-size:16px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em;">
+  <div class="flex-container">
+    <div id="sidebar" class="sidebar-left">
+      <div class="sidebar-content">
+        <div><label class="theme-toggle" for="theme_toggle"><input class="toggle__input" type="checkbox" id="theme_toggle">
+            <div class="toggle__fill"></div>
+          </label></div>
+      </div>
+    </div>
+    <div class="center-content">
+      <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
+        <div class="markdown-preview-sizer markdown-preview-section" style="padding: unset; width: unset; height: unset; margin: unset; max-width: unset; min-height: unset;">
+          <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
+          <div class="mod-header"></div>
+          <div>
+            <h1 data-heading="Chapitre 3 - Correction des algorithmes" id="Chapitre_3_-_Correction_des_algorithmes">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Chapitre 3 - Correction des algorithmes
+            </h1>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-info">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Index</div>
+              </div>
+              <div class="callout-content">
+                <p><a aria-label-position="top" aria-label="Index" data-href="Index" href="index.html" class="internal-link" target="_self" rel="noopener">Retour à l'index</a></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 data-heading="I - Définitions" id="I_-_Définitions">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>I - Définitions
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="A - Spécification d'un problème algorithmique" id="A_-_Spécification_d'un_problème_algorithmique">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>A - Spécification d'un problème algorithmique
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définitions</div>
+              </div>
+              <div class="callout-content">
+                <p> Les <strong>spécifications</strong> d'un problème comporte deux parties.</p>
+                <ul class="has-list-bullet">
+                  <li data-line="2">
+                    <div class="list-bullet"></div>la description des entrées admissibles
+                  </li>
+                  <li data-line="3">
+                    <div class="list-bullet"></div>la description du résultat ou des effets attendus (sorties)
+                  </li>
+                </ul>
+                <p>On décrit les entrées admissibles par des contraintes appelées <strong>préconditions</strong></p>
+                <p>On décrit les sorties attendues par des contraintes appelées <strong>postconditions</strong></p>
+                <p> Une <strong>assertion</strong> permet de s'assurer qu'une condition est bien respectée à un endroit.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-info">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Syntaxe</div>
+              </div>
+              <div class="callout-content">
+                <p>En OCaml <code>assert</code> est une fonction de type <code>bool -&gt; unit</code> qui lève une exception de type <code>Assert failure</code> si la condition exprimée n'est pas évaluée à <code>true</code>.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Exemple</div>
+              </div>
+              <div class="callout-content">
+                <p>Vérifier qu'une liste est triée :</p>
+                <pre class="language-ocaml" tabindex="0"><code class="language-ocaml is-loaded"><span class="token keyword">assert</span> <span class="token punctuation">(</span>est_croissante liste<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="B - Terminaison et correction" id="B_-_Terminaison_et_correction">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>B - Terminaison et correction
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition : terminaison</div>
+              </div>
+              <div class="callout-content">
+                <p>Une fonction <strong>termine</strong> si elle renvoie un résultat en un nombre fini d'étapes, quelles que soit les données d'entrée (en respectant les préconditions).</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition : correction partielle</div>
+              </div>
+              <div class="callout-content">
+                <p>Une fonction est <strong>partiellement correcte</strong> si lorsqu'elle termine elle renvoie le résultat attendu.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition : correction totale</div>
+              </div>
+              <div class="callout-content">
+                <p>Une fonction est <strong>totalement correcte</strong> ou <strong>correcte</strong> si elle termine et elle est partiellement correcte.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Exemple</div>
+              </div>
+              <div class="callout-content">
+                <p>Cette fonction est partiellement correcte mais elle ne termine pas.</p>
+                <pre class="language-ocaml" tabindex="0"><code class="language-ocaml is-loaded"><span class="token keyword">let</span> <span class="token keyword">rec</span> fact_fausse n <span class="token operator">=</span>
+ <span class="token keyword">if</span> n <span class="token operator">=</span> <span class="token number">1</span> <span class="token keyword">then</span> <span class="token number">1</span>
+ <span class="token keyword">else</span> n <span class="token operator">*</span> fact_fausse <span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 data-heading="II - Exemples en programmation récursive" id="II_-_Exemples_en_programmation_récursive">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>II - Exemples en programmation récursive
+            </h2>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Somme des n premiers entiers</div>
+              </div>
+              <div class="callout-content">
+                <pre class="language-ocaml" tabindex="0"><code class="language-ocaml is-loaded"><span class="token keyword">let</span> <span class="token keyword">rec</span> somme_n n <span class="token operator">=</span>
+ <span class="token keyword">assert</span> <span class="token punctuation">(</span>n <span class="token operator">&gt;=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token keyword">if</span> n <span class="token operator">=</span> <span class="token number">0</span> <span class="token keyword">then</span> <span class="token number">0</span> <span class="token keyword">else</span> n <span class="token operator">+</span> somme_n <span class="token punctuation">(</span>n<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+                <p><em>Terminaison</em> :</p>
+                <ul class="has-list-bullet">
+                  <li data-line="9">
+                    <div class="list-bullet"></div>Si <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3C"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>n</mi>
+                            <mo>&lt;</mo>
+                            <mn>0</mn>
+                          </math></mjx-assistive-mml></mjx-container></span> la précondition matérialisée par le <code>assert</code> n'est pas respectée et la fonction lève une exception
+                  </li>
+                  <li data-line="10">
+                    <div class="list-bullet"></div>Si on a <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2A7E TEX-A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>n</mi>
+                            <mo>⩾</mo>
+                            <mn>0</mn>
+                          </math></mjx-assistive-mml></mjx-container></span>
+                  </li>
+                  <li data-line="11">
+                    <div class="list-bullet"></div>Le cas <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>n</mi>
+                            <mo>=</mo>
+                            <mn>0</mn>
+                          </math></mjx-assistive-mml></mjx-container></span> vaut <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mn>0</mn>
+                          </math></mjx-assistive-mml></mjx-container></span> d'après le code de la fonction<br>
+                    -Lors de chaque appel récursif n décroît strictement de <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mn>1</mn>
+                          </math></mjx-assistive-mml></mjx-container></span>. Puisque <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-ds mjx-b"><mjx-c class="mjx-c2115 TEX-A"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow data-mjx-texclass="ORD">
+                              <mi mathvariant="double-struck">N</mi>
+                            </mrow>
+                          </math></mjx-assistive-mml></mjx-container></span> n'admet pas de suite infinie on peut alors conclure que la suite des appels termine.
+                  </li>
+                </ul>
+                <p><em>Correction</em> :<br>
+                  Notons <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> la propriété. <code>somme_n n</code> vaut la somme des premiers entiers positifs, soit <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munderover limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>n</mi>
+                            </mrow>
+                          </munderover>
+                          <mi>i</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> </p>
+                <p> <u>Cas de base</u> : Pour <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span>, d'après le code de la fonction on a <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c5F"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>s</mi>
+                          <mi>o</mi>
+                          <mi>m</mi>
+                          <mi>m</mi>
+                          <mi>e</mi>
+                          <mi mathvariant="normal">_</mi>
+                          <mi>n</mi>
+                          <mstyle scriptlevel="0">
+                            <mspace width="0.278em"></mspace>
+                          </mstyle>
+                          <mn>0</mn>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span> ce qui est égal à <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-munderover limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.276em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mrow data-mjx-texclass="ORD">
+                              <mn>0</mn>
+                            </mrow>
+                          </munderover>
+                          <mi>i</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span> Donc <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mn>0</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie.</p>
+                <p> <u>Hérédité</u> : Supposons que <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie. Alors on a, d'après le code de la fonction, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c5F"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>s</mi>
+                          <mi>o</mi>
+                          <mi>m</mi>
+                          <mi>m</mi>
+                          <mi>e</mi>
+                          <mi mathvariant="normal">_</mi>
+                          <mi>n</mi>
+                          <mstyle scriptlevel="0">
+                            <mspace width="0.278em"></mspace>
+                          </mstyle>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  Par hypothèse de récurrence : <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45C TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45A TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-n"><mjx-c class="mjx-c5F"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mstyle><mjx-mspace style="width: 0.278em;"></mjx-mspace></mjx-mstyle><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-munderover space="3" limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-munderover space="4" limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.233em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>s</mi>
+                          <mi>o</mi>
+                          <mi>m</mi>
+                          <mi>m</mi>
+                          <mi>e</mi>
+                          <mi mathvariant="normal">_</mi>
+                          <mi>n</mi>
+                          <mstyle scriptlevel="0">
+                            <mspace width="0.278em"></mspace>
+                          </mstyle>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo>+</mo>
+                          <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>n</mi>
+                            </mrow>
+                          </munderover>
+                          <mo>=</mo>
+                          <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>n</mi>
+                              <mo>+</mo>
+                              <mn>1</mn>
+                            </mrow>
+                          </munderover>
+                        </math></mjx-assistive-mml></mjx-container></span> Donc si <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie pour un n donné alors <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie.<br>
+                  Par principe de récurrence, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-n"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi><mjx-mstyle><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3E"></mjx-c><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mstyle><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi mathvariant="normal">∀</mi>
+                          <mstyle scriptlevel="0">
+                            <mspace width="0.167em"></mspace>
+                          </mstyle>
+                          <mi>n</mi>
+                          <mo>&gt;=</mo>
+                          <mn>0</mn>
+                          <mo>,</mo>
+                          <mstyle scriptlevel="0">
+                            <mspace width="0.167em"></mspace>
+                          </mstyle>
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie, ce qui prouve la correction de la fonction <code>somme_n</code></p>
+                <p><em>Complexité</em> :<br>
+                  Soit <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>T</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> le temps d'execution de <code>somme_n n</code> . Lorsque <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span> alors <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>T</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>c</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> où <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>c</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> est un constante représentant le temps nécessaire à renvoyer <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span>.<br>
+                  Sinon on a <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>T</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>d</mi>
+                          <mo>+</mo>
+                          <mi>T</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>−</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> où <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>d</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> est une constante représentant le temps nécesssaire pour effectuer une soustraction, une addition et un appel de fonction.<br>
+                  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>T</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est une suite arithmétique de raison <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>d</mi>
+                        </math></mjx-assistive-mml></mjx-container></span>. Alors pour tout <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3E"></mjx-c><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                          <mo>&gt;=</mo>
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span> on a <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>T</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>d</mi>
+                          <mo>×</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mi>c</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> donc <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>T</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>O</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span>.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Insertion d'un élément dans une liste triée</div>
+              </div>
+              <div class="callout-content">
+                <pre class="language-ocaml" tabindex="0"><code class="language-ocaml is-loaded"><span class="token keyword">let</span> <span class="token keyword">rec</span> insere x l <span class="token operator">=</span> <span class="token keyword">match</span> l <span class="token keyword">with</span>
+<span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span>x<span class="token punctuation">]</span>
+<span class="token operator">|</span> y <span class="token punctuation">::</span> q <span class="token operator">-&gt;</span> <span class="token keyword">if</span> x <span class="token operator">&lt;=</span> y <span class="token keyword">then</span> x <span class="token punctuation">::</span> l <span class="token keyword">else</span> y <span class="token punctuation">::</span> <span class="token punctuation">(</span>inserer x q<span class="token punctuation">)</span>
+<span class="token comment">(* 'a -&gt; 'a list -&gt; 'a list *)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+                <p><em>Terminaison</em> :<br>
+                  La fonction <code>insere</code> termine lorsque la liste passée en paramètre est vide ou lorsque <code>x</code> est inférieur ou égal à l'élément de tête de la liste.<br>
+                  Sinon la fonction effectue un appel récursif sur une liste de taille strictement inférieure.</p>
+                <p><em>Correction</em> :<br>
+                  Soit <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> : "Pour toute liste <code>l</code> croissante de longueur <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> et pour tout <code>x</code>, alors <code>insere x l</code> renvoie une liste croissante contenant les éléments de <code>l</code> et l'élément <code>x</code>"</p>
+                <p> <u>Initialisation</u> : Lorsque <code>l</code> est la liste vide, donc de longueur <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span>, <code>inserer x []</code> renvoie <code>[x]</code> donc <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mn>0</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie.</p>
+                <p> <u>Hérédité</u>: Supposons que <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vérifiée pour toute liste de taille inférieur ou égale à <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2A7E TEX-A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                          <mo>⩾</mo>
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span> .<br>
+                  Soit <code>m</code> la liste croissante de taille <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                        </math></mjx-assistive-mml></mjx-container></span> telle que <code>m = h::t</code><br>
+                  Par définition de <code>insere</code> nous avons</p>
+                <ul class="has-list-bullet">
+                  <li data-line="22">
+                    <div class="list-bullet"></div>si <code>x &lt;= h</code> alors <code>(insere x m) = x::h::t</code> qui est une liste croissante contenant les éléments de <code>m</code> et <code>x</code>.
+                  </li>
+                  <li data-line="23">
+                    <div class="list-bullet"></div>sinon <code>insere x m = h::(insere x t)</code> or par hypothèse de récurrence <code>insere x t</code> est croissante et contenant tous les éléments de <code>t</code> et <code>x</code>.<br>
+                    Comme <code>h &lt;= x</code>, <code>h</code> est aussi inférieur à tous les éléments de <code>insere x t</code><br>
+                    Par suite <code>h::(insere x t)</code> est également croissante et contient tous les éléments de <code>m</code> et <code>x</code>.
+                  </li>
+                </ul>
+                <p><em>Complexité</em> :</p>
+                <ul class="has-list-bullet">
+                  <li data-line="28">
+                    <div class="list-bullet"></div>Dans le pire cas, l'élément <code>x</code> est plus grand que tous les éléments de la liste. Dans ce cas, on effectue <code>n</code> appels à la fonction <code>insere</code>. A chaque appel de <code>insere</code>, on a une reconnaissance de motif avec branchement, une comparaison, un ajout en tête et un appel de fonction.<br>
+                    On a donc <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>T</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>n</mi>
+                            <mo stretchy="false">)</mo>
+                            <mo>=</mo>
+                            <mi>a</mi>
+                            <mo>+</mo>
+                            <mi>T</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>n</mi>
+                            <mo>−</mo>
+                            <mn>1</mn>
+                            <mo stretchy="false">)</mo>
+                          </math></mjx-assistive-mml></mjx-container></span> et <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>T</mi>
+                            <mo stretchy="false">(</mo>
+                            <mn>0</mn>
+                            <mo stretchy="false">)</mo>
+                            <mo>=</mo>
+                            <mi>b</mi>
+                          </math></mjx-assistive-mml></mjx-container></span> avec <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>a</mi>
+                          </math></mjx-assistive-mml></mjx-container></span> et <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>b</mi>
+                          </math></mjx-assistive-mml></mjx-container></span> des constantes positives.<br>
+                    La complexité en pire cas de la fonction <code>insere</code> est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>O</mi>
+                            <mo stretchy="false">(</mo>
+                            <mi>n</mi>
+                            <mo stretchy="false">)</mo>
+                          </math></mjx-assistive-mml></mjx-container></span>.
+                  </li>
+                  <li data-line="31">
+                    <div class="list-bullet"></div>Dans le meilleur cas, l'élément <code>x</code> à insérer est inférieur ou égal à tous les autres éléments de la liste et la fonction renvoie <code>x::l</code><br>
+                    La complexité de <code>insere</code> dans le meilleur cas est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mi>O</mi>
+                            <mo stretchy="false">(</mo>
+                            <mn>1</mn>
+                            <mo stretchy="false">)</mo>
+                          </math></mjx-assistive-mml></mjx-container></span>.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Tri d'une liste par insertion</div>
+              </div>
+              <div class="callout-content">
+                <pre class="language-ocaml" tabindex="0"><code class="language-ocaml is-loaded"><span class="token keyword">let</span> <span class="token keyword">rec</span> tri_insertion l <span class="token operator">=</span> <span class="token keyword">match</span> l <span class="token keyword">with</span>
+<span class="token operator">|</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">-&gt;</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token operator">|</span> e<span class="token punctuation">::</span>q <span class="token operator">-&gt;</span> insere e <span class="token punctuation">(</span>tri_insertion q<span class="token punctuation">)</span>
+<span class="token comment">(* 'a list -&gt; 'a list *)</span>
+</code><button class="copy-code-button">Copy</button></pre>
+                <p><em>Terminaison</em> :<br>
+                  La fonction <code>tri_insertion</code> termine lorsque la liste est vide.<br>
+                  Sinon la fonction effectue un appel récursif sur une liste de taille <code>(n-1)</code> et un appel à <code>insere</code>. La fonction <code>insere</code> termine pour toutes les listes et les valeurs de <code>x</code>.<br>
+                  Alors pour toute liste <code>u</code> l'appel <code>tri_insertion</code> termine.</p>
+                <p><em>Correction</em> :<br>
+                  Soit <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> la propriété "pour une liste <code>l</code> de taille <code>n</code> <code>tri_insertion</code> renvoie une liste constituée des éléments de <code>l</code> dans l'ordre croissant".</p>
+                <p><u>Initialisation</u> : Lorsque la liste <code>l</code> est vide <code>tri_insertion []</code> renvoie la liste vide. Donc <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mn>0</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie.</p>
+                <p><u>Hérédité</u> : Supposons que <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie pour toute liste <code>l</code> de taille <code>n</code>. Soit <code>m</code> une liste de taille <code>n+1</code> telle que <code>m=h::t</code>.<br>
+                  D'après le code de <code>tri_insertion</code> nous avons :<br>
+                  <code>tri_insertion m = insere h (tri_insertion t)</code><br>
+                  On a par hypothèse de récurrence <code>tri_insertion t</code> est constituée des éléments <code>t</code> dans l'ordre croissant. Puisque la fonction <code>insere</code> est correcte, le résultat de <code>insere h (tri_insertion t)</code> est une liste croissante constituée des éléments de <code>m</code>.<br>
+                  Alors si <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie alors <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie.<br>
+                  Par principe de récurrence la fonction <code>tri_insertion</code> est correcte.
+                </p>
+                <p><em>Complexité</em> :</p>
+                <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c7B TEX-S3"></mjx-c></mjx-mo><mjx-mtable style="min-width: 15.679em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: left; padding-bottom: 0.1em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: left; padding-top: 0.1em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-mo class="mjx-n" style="vertical-align: 0.25em;"></mjx-mo></mjx-mrow></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mrow data-mjx-texclass="INNER">
+                            <mo data-mjx-texclass="OPEN">{</mo>
+                            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+                              <mtr>
+                                <mtd>
+                                  <msub>
+                                    <mi>T</mi>
+                                    <mrow data-mjx-texclass="ORD">
+                                      <mi>t</mi>
+                                      <mi>r</mi>
+                                      <mi>i</mi>
+                                    </mrow>
+                                  </msub>
+                                  <mo stretchy="false">(</mo>
+                                  <mn>0</mn>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>a</mi>
+                                </mtd>
+                              </mtr>
+                              <mtr>
+                                <mtd>
+                                  <msub>
+                                    <mi>T</mi>
+                                    <mrow data-mjx-texclass="ORD">
+                                      <mi>t</mi>
+                                      <mi>r</mi>
+                                      <mi>i</mi>
+                                    </mrow>
+                                  </msub>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo>+</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>b</mi>
+                                  <mo>+</mo>
+                                  <msub>
+                                    <mi>T</mi>
+                                    <mrow data-mjx-texclass="ORD">
+                                      <mi>i</mi>
+                                      <mi>n</mi>
+                                      <mi>s</mi>
+                                      <mi>e</mi>
+                                      <mi>r</mi>
+                                      <mi>e</mi>
+                                    </mrow>
+                                  </msub>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>+</mo>
+                                  <msub>
+                                    <mi>T</mi>
+                                    <mrow data-mjx-texclass="ORD">
+                                      <mi>t</mi>
+                                      <mi>r</mi>
+                                      <mi>i</mi>
+                                    </mrow>
+                                  </msub>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+                          </mrow>
+                        </math></mjx-assistive-mml></mjx-container></span></p>
+                <p>En utilisant <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D460 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <msub>
+                            <mi>T</mi>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mi>n</mi>
+                              <mi>s</mi>
+                              <mi>e</mi>
+                              <mi>r</mi>
+                              <mi>e</mi>
+                            </mrow>
+                          </msub>
+                        </math></mjx-assistive-mml></mjx-container></span> est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>O</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> :<br>
+                  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c7B TEX-S3"></mjx-c></mjx-mo><mjx-mtable style="min-width: 14.003em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: left; padding-bottom: 0.1em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: left; padding-top: 0.1em;"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-msub space="3"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-mo class="mjx-n" style="vertical-align: 0.25em;"></mjx-mo></mjx-mrow></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mrow data-mjx-texclass="INNER">
+                            <mo data-mjx-texclass="OPEN">{</mo>
+                            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+                              <mtr>
+                                <mtd>
+                                  <msub>
+                                    <mi>T</mi>
+                                    <mrow data-mjx-texclass="ORD">
+                                      <mi>t</mi>
+                                      <mi>r</mi>
+                                      <mi>i</mi>
+                                    </mrow>
+                                  </msub>
+                                  <mo stretchy="false">(</mo>
+                                  <mn>0</mn>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>a</mi>
+                                </mtd>
+                              </mtr>
+                              <mtr>
+                                <mtd>
+                                  <msub>
+                                    <mi>T</mi>
+                                    <mrow data-mjx-texclass="ORD">
+                                      <mi>t</mi>
+                                      <mi>r</mi>
+                                      <mi>i</mi>
+                                    </mrow>
+                                  </msub>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo>+</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>c</mi>
+                                  <mo>+</mo>
+                                  <mi>d</mi>
+                                  <mo>×</mo>
+                                  <mi>n</mi>
+                                  <mo>+</mo>
+                                  <msub>
+                                    <mi>T</mi>
+                                    <mrow data-mjx-texclass="ORD">
+                                      <mi>t</mi>
+                                      <mi>r</mi>
+                                      <mi>i</mi>
+                                    </mrow>
+                                  </msub>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo stretchy="false">)</mo>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+                          </mrow>
+                        </math></mjx-assistive-mml></mjx-container></span>
+                </p>
+                <p>Montrons par récurrence que <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-munderover space="2" limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.233em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <msub>
+                            <mi>T</mi>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>t</mi>
+                              <mi>r</mi>
+                              <mi>i</mi>
+                            </mrow>
+                          </msub>
+                          <mo>=</mo>
+                          <mi>d</mi>
+                          <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>n</mi>
+                              <mo>−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                          </munderover>
+                          <mi>i</mi>
+                          <mo>+</mo>
+                          <mi>n</mi>
+                          <mo>×</mo>
+                          <mi>c</mi>
+                          <mo>+</mo>
+                          <mi>a</mi>
+                        </math></mjx-assistive-mml></mjx-container></span></p>
+                <p><u>Initialisation</u> :<br>
+                  Pour <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                          <mo>=</mo>
+                          <mn>0</mn>
+                        </math></mjx-assistive-mml></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <msub>
+                            <mi>T</mi>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>t</mi>
+                              <mi>r</mi>
+                              <mi>i</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <mn>0</mn>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>a</mi>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  Pour <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                          <mo>=</mo>
+                          <mn>1</mn>
+                        </math></mjx-assistive-mml></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <msub>
+                            <mi>T</mi>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>t</mi>
+                              <mi>r</mi>
+                              <mi>i</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>c</mi>
+                          <mo>+</mo>
+                          <mi>d</mi>
+                          <mo>×</mo>
+                          <mn>0</mn>
+                          <mo>+</mo>
+                          <mi>a</mi>
+                          <mo>=</mo>
+                          <mi>c</mi>
+                          <mo>+</mo>
+                          <mi>a</mi>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-munderover space="3" limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.276em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <msub>
+                            <mi>T</mi>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>t</mi>
+                              <mi>r</mi>
+                              <mi>i</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>d</mi>
+                          <mo>×</mo>
+                          <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mrow data-mjx-texclass="ORD">
+                              <mn>0</mn>
+                            </mrow>
+                          </munderover>
+                          <mi>i</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo>×</mo>
+                          <mi>c</mi>
+                          <mo>+</mo>
+                          <mi>a</mi>
+                          <mo>=</mo>
+                          <mi>c</mi>
+                          <mo>×</mo>
+                          <mi>a</mi>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  Donc <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie
+                </p>
+                <p><u>Hérédité</u> : <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> vraie pour <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2A7E TEX-A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>n</mi>
+                          <mo>⩾</mo>
+                          <mn>1</mn>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-munderover space="2" limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c31"></mjx-c></mjx-mn></mjx-texatom><mjx-spacer style="margin-top: 0.233em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-munderover space="2" limits="false"><mjx-mo class="mjx-sop"><mjx-c class="mjx-c2211 TEX-S1"></mjx-c></mjx-mo><mjx-script style="vertical-align: -0.285em; margin-left: 0px;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi></mjx-texatom><mjx-spacer style="margin-top: 0.284em;"></mjx-spacer><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn></mjx-texatom></mjx-script></mjx-munderover><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <msub>
+                            <mi>T</mi>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>t</mi>
+                              <mi>r</mi>
+                              <mi>i</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>c</mi>
+                          <mo>+</mo>
+                          <mi>d</mi>
+                          <mo>×</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mi>d</mi>
+                          <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>n</mi>
+                              <mo>−</mo>
+                              <mn>1</mn>
+                            </mrow>
+                          </munderover>
+                          <mi>i</mi>
+                          <mo>+</mo>
+                          <mi>n</mi>
+                          <mo>×</mo>
+                          <mi>c</mi>
+                          <mo>+</mo>
+                          <mi>a</mi>
+                          <mo>=</mo>
+                          <mi>d</mi>
+                          <munderover>
+                            <mo data-mjx-texclass="OP">∑</mo>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>i</mi>
+                              <mo>=</mo>
+                              <mn>0</mn>
+                            </mrow>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>n</mi>
+                            </mrow>
+                          </munderover>
+                          <mi>i</mi>
+                          <mo>+</mo>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                          <mo>×</mo>
+                          <mi>c</mi>
+                          <mo>+</mo>
+                          <mi>a</mi>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  Donc <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D443 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>P</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span> est vraie.
+                </p>
+                <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-msub><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: -0.15em; margin-left: -0.12em;"><mjx-texatom size="s" texclass="ORD"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D461 TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45F TEX-I"></mjx-c></mjx-mi><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D456 TEX-I"></mjx-c></mjx-mi></mjx-texatom></mjx-script></mjx-msub><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D451 TEX-I"></mjx-c></mjx-mi><mjx-mstyle><mjx-mfrac><mjx-frac type="d"><mjx-num><mjx-nstrut type="d"></mjx-nstrut><mjx-mrow><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-mrow></mjx-num><mjx-dbox><mjx-dtable><mjx-line type="d"></mjx-line><mjx-row><mjx-den><mjx-dstrut type="d"></mjx-dstrut><mjx-mn class="mjx-n"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-den></mjx-row></mjx-dtable></mjx-dbox></mjx-frac></mjx-mfrac></mjx-mstyle><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <msub>
+                            <mi>T</mi>
+                            <mrow data-mjx-texclass="ORD">
+                              <mi>t</mi>
+                              <mi>r</mi>
+                              <mi>i</mi>
+                            </mrow>
+                          </msub>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>=</mo>
+                          <mi>d</mi>
+                          <mstyle displaystyle="true" scriptlevel="0">
+                            <mfrac>
+                              <mrow>
+                                <mi>n</mi>
+                                <mo>×</mo>
+                                <mo stretchy="false">(</mo>
+                                <mi>n</mi>
+                                <mo>+</mo>
+                                <mn>1</mn>
+                                <mo stretchy="false">)</mo>
+                              </mrow>
+                              <mn>2</mn>
+                            </mfrac>
+                          </mstyle>
+                          <mo>+</mo>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo>+</mo>
+                          <mn>1</mn>
+                          <mo stretchy="false">)</mo>
+                          <mo>×</mo>
+                          <mi>c</mi>
+                          <mo>+</mo>
+                          <mi>a</mi>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  Donc la complexité de <code>tri_insertion</code> est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-msup><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-script style="vertical-align: 0.363em;"><mjx-mn class="mjx-n" size="s"><mjx-c class="mjx-c32"></mjx-c></mjx-mn></mjx-script></mjx-msup><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>O</mi>
+                          <mo stretchy="false">(</mo>
+                          <msup>
+                            <mi>n</mi>
+                            <mn>2</mn>
+                          </msup>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span>.</p>
+                <p><em>Complexité dans le cas où la liste est déjà triée</em> :</p>
+                <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c7B TEX-S3"></mjx-c></mjx-mo><mjx-mtable style="min-width: 14.85em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: left; padding-bottom: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: left; padding-top: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D450 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-mo class="mjx-n" style="vertical-align: 0.25em;"></mjx-mo></mjx-mrow></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mrow data-mjx-texclass="INNER">
+                            <mo data-mjx-texclass="OPEN">{</mo>
+                            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+                              <mtr>
+                                <mtd>
+                                  <mi>T</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mn>0</mn>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>a</mi>
+                                </mtd>
+                              </mtr>
+                              <mtr>
+                                <mtd>
+                                  <mi>T</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>b</mi>
+                                  <mo>+</mo>
+                                  <mi>c</mi>
+                                  <mo>×</mo>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>+</mo>
+                                  <mi>T</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+                          </mrow>
+                        </math></mjx-assistive-mml></mjx-container></span></p>
+                <p>Lorsque la liste es tdéjà triée, le temps passé dans est constant. On obtient les équations suivantes :</p>
+                <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mrow><mjx-mo class="mjx-s3"><mjx-c class="mjx-c7B TEX-S3"></mjx-c></mjx-mo><mjx-mtable style="min-width: 12.232em;"><mjx-table><mjx-itable><mjx-mtr><mjx-mtd style="text-align: left; padding-bottom: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mn class="mjx-n"><mjx-c class="mjx-c30"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr><mjx-mtr><mjx-mtd style="text-align: left; padding-top: 0.1em;"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c3D"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D452 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2B"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D447 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-c2212"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="3"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mstyle><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-mi class="mjx-n"><mjx-c class="mjx-c2200"></mjx-c></mjx-mi><mjx-mstyle><mjx-mspace style="width: 0.167em;"></mjx-mspace></mjx-mstyle><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2A7E TEX-A"></mjx-c></mjx-mo><mjx-mn class="mjx-n" space="4"><mjx-c class="mjx-c31"></mjx-c></mjx-mn><mjx-tstrut></mjx-tstrut></mjx-mtd></mjx-mtr></mjx-itable></mjx-table></mjx-mtable><mjx-mo class="mjx-n" style="vertical-align: 0.25em;"></mjx-mo></mjx-mrow></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mrow data-mjx-texclass="INNER">
+                            <mo data-mjx-texclass="OPEN">{</mo>
+                            <mtable columnalign="left left" columnspacing="1em" rowspacing=".2em">
+                              <mtr>
+                                <mtd>
+                                  <mi>T</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mn>0</mn>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>a</mi>
+                                </mtd>
+                              </mtr>
+                              <mtr>
+                                <mtd>
+                                  <mi>T</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo stretchy="false">)</mo>
+                                  <mo>=</mo>
+                                  <mi>e</mi>
+                                  <mo>+</mo>
+                                  <mi>T</mi>
+                                  <mo stretchy="false">(</mo>
+                                  <mi>n</mi>
+                                  <mo>−</mo>
+                                  <mn>1</mn>
+                                  <mo stretchy="false">)</mo>
+                                  <mstyle scriptlevel="0">
+                                    <mspace width="0.167em"></mspace>
+                                  </mstyle>
+                                  <mi mathvariant="normal">∀</mi>
+                                  <mstyle scriptlevel="0">
+                                    <mspace width="0.167em"></mspace>
+                                  </mstyle>
+                                  <mi>n</mi>
+                                  <mo>⩾</mo>
+                                  <mn>1</mn>
+                                </mtd>
+                              </mtr>
+                            </mtable>
+                            <mo data-mjx-texclass="CLOSE" fence="true" stretchy="true" symmetric="true"></mo>
+                          </mrow>
+                        </math></mjx-assistive-mml></mjx-container></span></p>
+                <p>La complexité de <code>tri_insertion l</code> lorsque <code>l</code> est déjà triée est <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D442 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D45B TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>O</mi>
+                          <mo stretchy="false">(</mo>
+                          <mi>n</mi>
+                          <mo stretchy="false">)</mo>
+                        </math></mjx-assistive-mml></mjx-container></span>.</p>
+              </div>
+            </div>
+          </div>
+          <div class="mod-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar" class="sidebar-right">
+      <div class="sidebar-content">
+        <div class="outline-container" data-size="0">
+          <div class="outline-header">
+            <h6 style="margin: 1em 1em 1em 0px;">Table of Contents</h6><button class="clickable-icon collapse-all"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button>
+          </div>
+          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Chapitre_3_-_Correction_des_algorithmes">
+              <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div><span class="outline-item-title">Chapitre 3 - Correction des algorithmes</span>
+            </a>
+            <div class="outline-item-children">
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#I_-_Définitions">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">I - Définitions</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#A_-_Spécification_d'un_problème_algorithmique">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">A - Spécification d'un problème algorithmique</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#B_-_Terminaison_et_correction">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">B - Terminaison et correction</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#II_-_Exemples_en_programmation_récursive">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">II - Exemples en programmation récursive</span>
+                </a>
+                <div class="outline-item-children"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Chapitre_10</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta charset="UTF-8">
+
+  <link rel="icon" sizes="96x96" href="https://publish-01.obsidian.md/access/f786db9fac45774fa4f0d8112e232d67/favicon-96x96.png">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js" integrity="sha256-xLD7nhI62fcsEZK2/v8LsBcb4lG7dgULkuXoXB/j91c=" crossorigin="anonymous"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.3/iconify-icon.min.js"></script>
+  <script src="https://pixijs.download/v7.2.4/pixi.js"></script>
+
+
+  <link rel="stylesheet" href="../styles/obsidian-styles.css">
+  <link rel="stylesheet" href="../styles/plugin-styles.css">
+  <link rel="stylesheet" href="../styles/theme.css">
+  <link rel="stylesheet" href="../styles/snippets.css">
+
+  <style> </style>
+  <style>
+    mjx-container[jax="CHTML"] {
+      line-height: 0;
+    }
+
+    mjx-container [space="1"] {
+      margin-left: .111em;
+    }
+
+    mjx-container [space="2"] {
+      margin-left: .167em;
+    }
+
+    mjx-container [space="3"] {
+      margin-left: .222em;
+    }
+
+    mjx-container [space="4"] {
+      margin-left: .278em;
+    }
+
+    mjx-container [space="5"] {
+      margin-left: .333em;
+    }
+
+    mjx-container [rspace="1"] {
+      margin-right: .111em;
+    }
+
+    mjx-container [rspace="2"] {
+      margin-right: .167em;
+    }
+
+    mjx-container [rspace="3"] {
+      margin-right: .222em;
+    }
+
+    mjx-container [rspace="4"] {
+      margin-right: .278em;
+    }
+
+    mjx-container [rspace="5"] {
+      margin-right: .333em;
+    }
+
+    mjx-container [size="s"] {
+      font-size: 70.7%;
+    }
+
+    mjx-container [size="ss"] {
+      font-size: 50%;
+    }
+
+    mjx-container [size="Tn"] {
+      font-size: 60%;
+    }
+
+    mjx-container [size="sm"] {
+      font-size: 85%;
+    }
+
+    mjx-container [size="lg"] {
+      font-size: 120%;
+    }
+
+    mjx-container [size="Lg"] {
+      font-size: 144%;
+    }
+
+    mjx-container [size="LG"] {
+      font-size: 173%;
+    }
+
+    mjx-container [size="hg"] {
+      font-size: 207%;
+    }
+
+    mjx-container [size="HG"] {
+      font-size: 249%;
+    }
+
+    mjx-container [width="full"] {
+      width: 100%;
+    }
+
+    mjx-box {
+      display: inline-block;
+    }
+
+    mjx-block {
+      display: block;
+    }
+
+    mjx-itable {
+      display: inline-table;
+    }
+
+    mjx-row {
+      display: table-row;
+    }
+
+    mjx-row>* {
+      display: table-cell;
+    }
+
+    mjx-mtext {
+      display: inline-block;
+    }
+
+    mjx-mstyle {
+      display: inline-block;
+    }
+
+    mjx-merror {
+      display: inline-block;
+      color: red;
+      background-color: yellow;
+    }
+
+    mjx-mphantom {
+      visibility: hidden;
+    }
+
+    _::-webkit-full-page-media,
+    _:future,
+    :root mjx-container {
+      will-change: opacity;
+    }
+
+    mjx-assistive-mml {
+      position: absolute !important;
+      top: 0px;
+      left: 0px;
+      clip: rect(1px, 1px, 1px, 1px);
+      padding: 1px 0px 0px 0px !important;
+      border: 0px !important;
+      display: block !important;
+      width: auto !important;
+      overflow: hidden !important;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    mjx-assistive-mml[display="block"] {
+      width: 100% !important;
+    }
+
+    mjx-math {
+      display: inline-block;
+      text-align: left;
+      line-height: 0;
+      text-indent: 0;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 100%;
+      font-size-adjust: none;
+      letter-spacing: normal;
+      border-collapse: collapse;
+      word-wrap: normal;
+      word-spacing: normal;
+      white-space: nowrap;
+      direction: ltr;
+      padding: 1px 0;
+    }
+
+    mjx-container[jax="CHTML"][display="true"] {
+      display: block;
+      text-align: center;
+      margin: 1em 0;
+    }
+
+    mjx-container[jax="CHTML"][display="true"][width="full"] {
+      display: flex;
+    }
+
+    mjx-container[jax="CHTML"][display="true"] mjx-math {
+      padding: 0;
+    }
+
+    mjx-container[jax="CHTML"][justify="left"] {
+      text-align: left;
+    }
+
+    mjx-container[jax="CHTML"][justify="right"] {
+      text-align: right;
+    }
+
+    mjx-mo {
+      display: inline-block;
+      text-align: left;
+    }
+
+    mjx-stretchy-h {
+      display: inline-table;
+      width: 100%;
+    }
+
+    mjx-stretchy-h>* {
+      display: table-cell;
+      width: 0;
+    }
+
+    mjx-stretchy-h>*>mjx-c {
+      display: inline-block;
+      transform: scalex(1.0000001);
+    }
+
+    mjx-stretchy-h>*>mjx-c::before {
+      display: inline-block;
+      width: initial;
+    }
+
+    mjx-stretchy-h>mjx-ext {
+      /* IE */
+      overflow: hidden;
+      /* others */
+      overflow: clip visible;
+      width: 100%;
+    }
+
+    mjx-stretchy-h>mjx-ext>mjx-c::before {
+      transform: scalex(500);
+    }
+
+    mjx-stretchy-h>mjx-ext>mjx-c {
+      width: 0;
+    }
+
+    mjx-stretchy-h>mjx-beg>mjx-c {
+      margin-right: -.1em;
+    }
+
+    mjx-stretchy-h>mjx-end>mjx-c {
+      margin-left: -.1em;
+    }
+
+    mjx-stretchy-v {
+      display: inline-block;
+    }
+
+    mjx-stretchy-v>* {
+      display: block;
+    }
+
+    mjx-stretchy-v>mjx-beg {
+      height: 0;
+    }
+
+    mjx-stretchy-v>mjx-end>mjx-c {
+      display: block;
+    }
+
+    mjx-stretchy-v>*>mjx-c {
+      transform: scaley(1.0000001);
+      transform-origin: left center;
+      overflow: hidden;
+    }
+
+    mjx-stretchy-v>mjx-ext {
+      display: block;
+      height: 100%;
+      box-sizing: border-box;
+      border: 0px solid transparent;
+      /* IE */
+      overflow: hidden;
+      /* others */
+      overflow: visible clip;
+    }
+
+    mjx-stretchy-v>mjx-ext>mjx-c::before {
+      width: initial;
+      box-sizing: border-box;
+    }
+
+    mjx-stretchy-v>mjx-ext>mjx-c {
+      transform: scaleY(500) translateY(.075em);
+      overflow: visible;
+    }
+
+    mjx-mark {
+      display: inline-block;
+      height: 0px;
+    }
+
+    mjx-c {
+      display: inline-block;
+    }
+
+    mjx-utext {
+      display: inline-block;
+      padding: .75em 0 .2em 0;
+    }
+
+    mjx-c::before {
+      display: block;
+      width: 0;
+    }
+
+    .MJX-TEX {
+      font-family: MJXZERO, MJXTEX;
+    }
+
+    .TEX-B {
+      font-family: MJXZERO, MJXTEX-B;
+    }
+
+    .TEX-I {
+      font-family: MJXZERO, MJXTEX-I;
+    }
+
+    .TEX-MI {
+      font-family: MJXZERO, MJXTEX-MI;
+    }
+
+    .TEX-BI {
+      font-family: MJXZERO, MJXTEX-BI;
+    }
+
+    .TEX-S1 {
+      font-family: MJXZERO, MJXTEX-S1;
+    }
+
+    .TEX-S2 {
+      font-family: MJXZERO, MJXTEX-S2;
+    }
+
+    .TEX-S3 {
+      font-family: MJXZERO, MJXTEX-S3;
+    }
+
+    .TEX-S4 {
+      font-family: MJXZERO, MJXTEX-S4;
+    }
+
+    .TEX-A {
+      font-family: MJXZERO, MJXTEX-A;
+    }
+
+    .TEX-C {
+      font-family: MJXZERO, MJXTEX-C;
+    }
+
+    .TEX-CB {
+      font-family: MJXZERO, MJXTEX-CB;
+    }
+
+    .TEX-FR {
+      font-family: MJXZERO, MJXTEX-FR;
+    }
+
+    .TEX-FRB {
+      font-family: MJXZERO, MJXTEX-FRB;
+    }
+
+    .TEX-SS {
+      font-family: MJXZERO, MJXTEX-SS;
+    }
+
+    .TEX-SSB {
+      font-family: MJXZERO, MJXTEX-SSB;
+    }
+
+    .TEX-SSI {
+      font-family: MJXZERO, MJXTEX-SSI;
+    }
+
+    .TEX-SC {
+      font-family: MJXZERO, MJXTEX-SC;
+    }
+
+    .TEX-T {
+      font-family: MJXZERO, MJXTEX-T;
+    }
+
+    .TEX-V {
+      font-family: MJXZERO, MJXTEX-V;
+    }
+
+    .TEX-VB {
+      font-family: MJXZERO, MJXTEX-VB;
+    }
+
+    mjx-stretchy-v mjx-c,
+    mjx-stretchy-h mjx-c {
+      font-family: MJXZERO, MJXTEX-S1, MJXTEX-S4, MJXTEX, MJXTEX-A ! important;
+    }
+
+    @font-face
+
+    /* 0 */
+      {
+      font-family: MJXZERO;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Zero.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 1 */
+      {
+      font-family: MJXTEX;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 2 */
+      {
+      font-family: MJXTEX-B;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 3 */
+      {
+      font-family: MJXTEX-I;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 4 */
+      {
+      font-family: MJXTEX-MI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Main-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 5 */
+      {
+      font-family: MJXTEX-BI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Math-BoldItalic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 6 */
+      {
+      font-family: MJXTEX-S1;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size1-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 7 */
+      {
+      font-family: MJXTEX-S2;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size2-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 8 */
+      {
+      font-family: MJXTEX-S3;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size3-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 9 */
+      {
+      font-family: MJXTEX-S4;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Size4-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 10 */
+      {
+      font-family: MJXTEX-A;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_AMS-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 11 */
+      {
+      font-family: MJXTEX-C;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 12 */
+      {
+      font-family: MJXTEX-CB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Calligraphic-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 13 */
+      {
+      font-family: MJXTEX-FR;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 14 */
+      {
+      font-family: MJXTEX-FRB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Fraktur-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 15 */
+      {
+      font-family: MJXTEX-SS;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 16 */
+      {
+      font-family: MJXTEX-SSB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Bold.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 17 */
+      {
+      font-family: MJXTEX-SSI;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_SansSerif-Italic.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 18 */
+      {
+      font-family: MJXTEX-SC;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Script-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 19 */
+      {
+      font-family: MJXTEX-T;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Typewriter-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 20 */
+      {
+      font-family: MJXTEX-V;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Regular.woff") format("woff");
+    }
+
+    @font-face
+
+    /* 21 */
+      {
+      font-family: MJXTEX-VB;
+      src: url("https://publish.obsidian.md/lib/mathjax/output/chtml/fonts/woff-v2/MathJax_Vector-Bold.woff") format("woff");
+    }
+
+    mjx-c.mjx-c27F5::before {
+      padding: 0.511em 1.609em 0.011em 0;
+      content: "\27F5";
+    }
+  </style>
+
+
+  <script id="relative-paths">
+    let rootPath = "..";
+    let mediaPath = "../media";
+    let jsPath = "../scripts";
+    let cssPath = "../styles";
+  </script>
+
+  <script>
+    async function loadDocument(url, pushHistory = true) {
+      let response;
+      try {
+        response = await fetch(url);
+      } catch (error) {
+        console.log("Cannot use fetch API (likely due to CORS), just loading the page normally.");
+        window.location.assign(url);
+        return;
+      }
+
+      let doc = document.implementation.createHTMLDocument();
+
+
+
+      deinitializePage();
+
+      if (response.ok) {
+        let html = (await response.text()).replaceAll("<!DOCTYPE html>", "").replaceAll("<html>", "").replaceAll("</html>", "");
+        doc.documentElement.innerHTML = html;
+
+        document.querySelector(".center-content").innerHTML = doc.querySelector(".center-content").innerHTML;
+        document.querySelector(".outline-container").innerHTML = doc.querySelector(".outline-container").innerHTML;
+        document.title = doc.title;
+
+        let pathsCode = doc.querySelector("#relative-paths").textContent;
+        // get a list of strings contained inside of ""
+        let paths = pathsCode.match(/"(.*?)"/g).map(function(val) {
+          return val.replace(/"/g, "");
+        });
+        rootPath = paths[0];
+        mediaPath = paths[1];
+        jsPath = paths[2];
+        cssPath = paths[3];
+
+        let splitURL = url.split("#");
+        let pathnameTarget = splitURL[0] ?? url;
+        let headingTarget = splitURL.length > 1 ? splitURL[1] : null;
+
+        // if the url has a heading, scroll to it
+        if (headingTarget) document.getElementById(headingTarget).scrollIntoView();
+
+        if (pushHistory) window.history.pushState({
+          path: pathnameTarget
+        }, '', pathnameTarget);
+      } else {
+        // if the page is not able to load instead add a header saying the page doesn't exist
+        document.querySelector(".markdown-preview-view").innerHTML =
+          `
+		<div>
+			<center style='position: relative; transform: translateY(20vh); width: 100%; text-align: center;'>
+				<h1 style>Page does not exist!</h1>
+			</center>
+		</div>
+		`;
+
+        document.querySelector(".outline-container").innerHTML = "";
+
+        document.title = "Page Not Found";
+
+        if (pushHistory) window.history.pushState({
+          path: window.location.pathname
+        }, '', window.location.pathname);
+      }
+
+      initializePage();
+
+      return doc;
+    }
+
+    //#region Initialization
+
+    function setupThemeToggle() {
+      console.log("Setting up theme toggle");
+
+      if (localStorage.getItem("theme_toggle") != null) {
+        setThemeToggle(localStorage.getItem("theme_toggle") == "true");
+      }
+
+      var lastScheme = "theme-dark";
+      // change theme to match current system theme
+      if (localStorage.getItem("theme_toggle") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
+        setThemeToggle(true);
+        lastScheme = "theme-light";
+      }
+      if (localStorage.getItem("theme_toggle") == null && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setThemeToggle(true);
+        lastScheme = "theme-dark";
+      }
+
+      // set initial toggle state based on body theme class
+      if ($("body").hasClass("theme-light")) {
+        setThemeToggle(true);
+      } else {
+        setThemeToggle(false);
+      }
+
+      function setThemeToggle(state, instant = false) {
+        $(".toggle__input").each(function() {
+          $(this).prop("checked", state);
+        });
+
+        if (!$(".toggle__input").hasClass("is-checked") && state) {
+          $(".toggle__input").addClass("is-checked");
+        } else if ($(".toggle__input").hasClass("is-checked") && !state) {
+          $(".toggle__input").removeClass("is-checked");
+        }
+
+        if (!state) {
+          if ($("body").hasClass("theme-light")) {
+            $("body").removeClass("theme-light");
+          }
+
+          if (!$("body").hasClass("theme-dark")) {
+            $("body").addClass("theme-dark");
+          }
+        } else {
+          if ($("body").hasClass("theme-dark")) {
+            $("body").removeClass("theme-dark");
+          }
+
+          if (!$("body").hasClass("theme-light")) {
+            $("body").addClass("theme-light");
+          }
+        }
+
+        localStorage.setItem("theme_toggle", state ? "true" : "false");
+      }
+
+      $(".toggle__input").on("click tap", function() {
+        setThemeToggle(!(localStorage.getItem("theme_toggle") == "true"));
+      });
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        // return if we are printing
+        if (window.matchMedia('print').matches) {
+          printing = true;
+          return;
+        }
+
+        let newColorScheme = event.matches ? "theme-dark" : "theme-light";
+
+        if (newColorScheme == lastScheme) return;
+
+        if (newColorScheme == "theme-dark") {
+          setThemeToggle(false);
+        }
+
+        if (newColorScheme == "theme-light") {
+          setThemeToggle(true);
+        }
+
+        lastScheme = newColorScheme;
+      });
+    }
+
+    function setupHeaders() {
+      // MAKE HEADERS COLLAPSIBLE
+      // if "heading-collapse-indicator" is clicked, toggle the display of every div until the next heading of the same or lower level
+      function getHeadingContentsSelector(header) {
+        let headingLevel = $(header).children().first().prop("tagName").toLowerCase();
+        let headingNumber = parseInt(headingLevel.replace("h", ""));
+
+        let endingHeadings = [1, 2, 3, 4, 5, 6].filter(function(item) {
+          return item <= headingNumber;
+        }).map(function(item) {
+          return `div:has(h${item})`;
+        });
+
+        let endingHeadingsSelector = endingHeadings.join(", ");
+
+        return endingHeadingsSelector;
+      }
+
+      function setHeaderCollapse(header, collapse) {
+        let selector = getHeadingContentsSelector($(header));
+
+        if (!collapse) {
+          if ($(header).hasClass("is-collapsed")) $(header).toggleClass("is-collapsed");
+
+          $(header).nextUntil(selector).show();
+
+          // close headers inside of this one that are collapsed
+          $(header).nextUntil(selector).each(function() {
+            if ($(this).hasClass("is-collapsed"))
+              setHeaderCollapse($(this), true);
+          });
+
+          //open headers above this one that are collapsed
+          lastHeaderSize = $(header).children().first().prop("tagName").toLowerCase().replace("h", "");
+          $(header).prevAll().each(function() {
+            if ($(this).hasClass("is-collapsed") && $(this).has("h1, h2, h3, h4, h5, h6")) {
+              let hSize = $(this).children().first().prop("tagName").toLowerCase().replace("h", "");
+              if (hSize < lastHeaderSize) {
+                setHeaderCollapse($(this), false);
+                lastHeaderSize = hSize;
+              }
+            }
+          });
+        } else {
+          if (!$(header).hasClass("is-collapsed")) $(header).toggleClass("is-collapsed");
+          $(header).nextUntil(selector).hide();
+        }
+      }
+
+      $(".heading-collapse-indicator").on("click tap", function() {
+        var isCollapsed = $(this).parent().parent().hasClass("is-collapsed");
+        setHeaderCollapse($(this).parent().parent(), !isCollapsed);
+      });
+
+      // unfold header when an internal link that points to that header is clicked
+      $(".internal-link").on("click tap", function() {
+        let target = $(this).attr("href");
+
+        // if the target is a header uncollapse it
+        if (target.startsWith("#")) {
+          let header = $(document.getElementById(target.substring(1)));
+
+          setHeaderCollapse($(header).parent(), false);
+        }
+
+      });
+    }
+
+    function setupOutline() {
+      // MAKE OUTLINE COLLAPSIBLE
+      // if "outline-header" is clicked, toggle the display of every div until the next heading of the same or lower level
+      function setOutlineCollapse(header, collapse) {
+        if (collapse) {
+          if (!$(header).hasClass("is-collapsed"))
+            $(header).addClass("is-collapsed");
+
+          $(header).children(".outline-item-children").slideUp(120);
+        } else {
+          if ($(header).hasClass("is-collapsed"))
+            $(header).removeClass("is-collapsed");
+
+          $(header).children(".outline-item-children").slideDown(120);
+        }
+      }
+
+      function toggleOutlineCollapse(header) {
+        let isCollapsed = $(header).hasClass("is-collapsed");
+        setOutlineCollapse(header, !isCollapsed);
+      }
+
+      $(".outline-item-contents > .collapse-icon").on("click tap", function(e) {
+        toggleOutlineCollapse($(this).parent().parent());
+
+        // Prevent the collapse button from triggering the parent <a> tag navigation.
+        // fix implented by 'zombony' from GitHub
+        return false;
+      });
+
+      $(".collapse-all").on("click tap", function() {
+        let button = $(this);
+        $(".outline-container div.outline-item").each(function() {
+          setOutlineCollapse($(this), !button.hasClass("is-collapsed"));
+        });
+
+        button.toggleClass("is-collapsed");
+
+        button.find("iconify-icon").attr("icon", button.hasClass("is-collapsed") ? "ph:arrows-out-line-horizontal-bold" : "ph:arrows-in-line-horizontal-bold");
+      });
+
+      // hide the control button if the header has no children
+      $(".outline-item-children:not(:has(*))").each(function() {
+        $(this).parent().find(".collapse-icon").hide();
+      });
+    }
+
+    function setupCallouts() {
+      // MAKE CALLOUTS COLLAPSIBLE
+      // if the callout title is clicked, toggle the display of .callout-content
+      $(".callout.is-collapsible .callout-title").on("click tap", function() {
+        var isCollapsed = $(this).parent().hasClass("is-collapsed");
+
+        if (isCollapsed) {
+          $(this).parent().toggleClass("is-collapsed");
+        }
+
+        $(this).parent().find(".callout-content").slideToggle(duration = 100, complete = function() {
+          if (!isCollapsed) {
+            $(this).parent().toggleClass("is-collapsed");
+          }
+        });
+      });
+    }
+
+    function setupCheckboxes() {
+      // Fix checkboxed toggling .is-checked
+      $(".task-list-item-checkbox").on("click tap", function() {
+        $(this).parent().toggleClass("is-checked");
+        $(this).parent().attr("data-task", $(this).parent().hasClass("is-checked") ? "x" : " ");
+      });
+
+      $(`.plugin-tasks-list-item input[type="checkbox"]`).each(function() {
+        $(this).prop("checked", $(this).parent().hasClass("is-checked"));
+      });
+
+      $('.kanban-plugin__item.is-complete').each(function() {
+        $(this).find('input[type="checkbox"]').prop("checked", true);
+      });
+    }
+
+    function setupCanvas() {
+      let focusedNode = null;
+
+      // make canvas nodes selectable
+      $(".canvas-node-content-blocker").on("click tap", function() {
+        $(this).parent().parent().toggleClass("is-focused");
+        $(this).hide();
+
+        if (focusedNode) {
+          focusedNode.removeClass("is-focused");
+          $(focusedNode).find(".canvas-node-content-blocker").show();
+        }
+
+        focusedNode = $(this).parent().parent();
+      });
+
+      // make canvas node deselect when clicking outside
+      $(document).on("click tap", function(event) {
+        if (!$(event.target).closest(".canvas-node").length) {
+          $(".canvas-node").removeClass("is-focused");
+          $(".canvas-node-content-blocker").show();
+        }
+      });
+    }
+
+    function setupCodeblocks() {
+      // make code snippet block copy button copy the code to the clipboard
+      $(".copy-code-button").on("click tap", function() {
+        let code = $(this).parent().find("code").text();
+        navigator.clipboard.writeText(code);
+        $(this).text("Copied!");
+        // set a timeout to change the text back
+        setTimeout(function() {
+          $(".copy-code-button").text("Copy");
+        }, 2000);
+      });
+    }
+
+    function setupLinks() {
+      $(".internal-link, .footnote-link").on("click tap", function() {
+        let target = $(this).attr("href");
+
+        // this is linking to a different page
+        if (!target.startsWith("#")) {
+          console.log("Loading document: " + target);
+          // if the target is not a header, load the page
+          loadDocument(target);
+
+          // make sure link doesn't redirect
+          return false;
+        } else {
+          document.getElementById(target.substring(1)).scrollIntoView();
+          return false;
+        }
+      });
+
+      window.onpopstate = function(event) {
+        loadDocument(window.location.pathname, false);
+      }
+    }
+
+    function initializePage() {
+      setupThemeToggle();
+      setupHeaders();
+      setupOutline();
+      setupCallouts();
+      setupCheckboxes();
+      setupCanvas();
+      setupCodeblocks();
+      setupLinks();
+    }
+
+    function deinitializePage() {
+      // remove all event listeners
+      $(".toggle__input").off("click tap");
+      $(".callout.is-collapsible .callout-title").off("click tap");
+      $(".heading-collapse-indicator").off("click tap");
+      $(".outline-item-contents > .collapse-icon").off("click tap");
+      $(".collapse-all").off("click tap");
+      $(".task-list-item-checkbox").off("click tap");
+      $(".copy-code-button").off("click tap");
+      $(".canvas-node-content-blocker").off("click tap");
+      $("center-content").find("*").off("click tap");
+    }
+
+    //#endregion
+
+    jQuery(initializePage);
+  </script>
+
+</head>
+
+<body class="theme-dark mod-windows is-frameless is-hidden-frameless obsidian-app show-inline-title show-view-header is-maximized" style="--zoom-factor:1; --font-text-size:16px; --line-width:50em; --line-width-adaptive:50em; --file-line-width:50em;">
+  <div class="flex-container">
+    <div id="sidebar" class="sidebar-left">
+      <div class="sidebar-content">
+        <div><label class="theme-toggle" for="theme_toggle"><input class="toggle__input" type="checkbox" id="theme_toggle">
+            <div class="toggle__fill"></div>
+          </label></div>
+      </div>
+    </div>
+    <div class="center-content">
+      <div class="markdown-preview-view markdown-rendered node-insert-event is-readable-line-width allow-fold-headings show-indentation-guide allow-fold-lists" style="tab-size: 4;">
+        <div class="markdown-preview-sizer markdown-preview-section" style="padding: unset; width: unset; height: unset; margin: unset; max-width: unset; min-height: unset;">
+          <div class="markdown-preview-pusher" style="width: 1px; height: 0.1px; margin-bottom: 0px;"></div>
+          <div class="mod-header"></div>
+          <div>
+            <h1 data-heading="Chapitre 10 - Bases de données relationnelles" id="Chapitre_10_-_Bases_de_données_relationnelles">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Chapitre 10 - Bases de données relationnelles
+            </h1>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="info" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-info">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Index</div>
+              </div>
+              <div class="callout-content">
+                <p><a aria-label-position="top" aria-label="Index" data-href="Index" href="index.html" class="internal-link" target="_self" rel="noopener">Retour à l'index</a></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 data-heading="I – Introduction" id="I_–_Introduction">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>I – Introduction
+            </h2>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="tldr" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-clipboard-list">
+                    <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                    <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                    <path d="M12 11h4"></path>
+                    <path d="M12 16h4"></path>
+                    <path d="M8 11h.01"></path>
+                    <path d="M8 16h.01"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Objet d'étude</div>
+              </div>
+              <div class="callout-content">
+                <p>On s'interesse aux BD relationelles<br>
+                  <strong>SGBDR</strong> = <strong>S</strong>ystème de <strong>G</strong>estion de <strong>B</strong>ase de <strong>D</strong>onnées <strong>R</strong>elationnelles
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 data-heading="II – Bases de données relationnelles" id="II_–_Bases_de_données_relationnelles">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>II – Bases de données relationnelles
+            </h2>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définitions</div>
+              </div>
+              <div class="callout-content">
+                <p>Une base de données relationnelles est un ensemble de tables ou de relations</p>
+                <p>Le <strong>schéma relationnel</strong> de LesVegetaux s'écrit&nbsp;:<br>
+                  LesVegetaux(<u>idVeg</u>, nomVeg, couleur, type, prix)</p>
+                <p>Une <strong>valeur</strong> est une donnée d'un attribut pour un enregistrement.<br>
+                  <strong>attribut</strong>&nbsp;: colonne<br>
+                  <strong>enregistrement</strong>&nbsp;: ligne<br>
+                  Les attributs dont le nom est souligné constituent l'identifiant de la relation<br>
+                  un identifiant est unique à un enregistrement dans une table
+                </p>
+                <p>Les valeurs de l'identifiant (clé primaire de la relation) sont uniques<br>
+                  Un attribut a un type&nbsp;: c'est le <strong>domaine de définition</strong></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 data-heading="III- Interrogation avec le langage SQL" id="III-_Interrogation_avec_le_langage_SQL">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>III- Interrogation avec le langage SQL
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="A – Projection" id="A_–_Projection">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>A – Projection
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="1) Présentation" id="1)_Présentation">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1) Présentation
+            </h4>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">A</th>
+                  <th align="center">X</th>
+                  <th align="center">Y</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">2</td>
+                  <td align="center">T</td>
+                </tr>
+                <tr>
+                  <td align="center">1</td>
+                  <td align="center">6</td>
+                  <td align="center">G</td>
+                </tr>
+                <tr>
+                  <td align="center">4</td>
+                  <td align="center">3</td>
+                  <td align="center">Z</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p>On «&nbsp;projette&nbsp;» une relation sur un sous-ensemble d'attributs<br>
+              projection de R dans (A,X) →</p>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">A</th>
+                  <th align="center">X</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">2</td>
+                </tr>
+                <tr>
+                  <td align="center">1</td>
+                  <td align="center">6</td>
+                </tr>
+                <tr>
+                  <td align="center">4</td>
+                  <td align="center">3</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h4 data-heading="2) Syntaxe en SQL" id="2)_Syntaxe_en_SQL">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>2) Syntaxe en SQL
+            </h4>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> A<span class="token punctuation">,</span>X <span class="token comment">--le nom des attributs</span>
+<span class="token keyword">FROM</span> R <span class="token punctuation">;</span> <span class="token comment">--nom de la relation</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> nomVeg
+<span class="token keyword">FROM</span> lesVegetaux <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h4 data-heading="3&nbsp;) Gestion des doublons" id="3&nbsp;)_Gestion_des_doublons">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>3&nbsp;) Gestion des doublons
+            </h4>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> A<span class="token punctuation">,</span>X
+<span class="token keyword">FROM</span> R <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h3 data-heading="B – Selection" id="B_–_Selection">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>B – Selection
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="1) Syntaxe" id="1)_Syntaxe">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1) Syntaxe
+            </h4>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> A
+<span class="token keyword">FROM</span> R
+<span class="token keyword">WHERE</span> condition <span class="token punctuation">;</span> <span class="token comment">--condition pour conserver un enregistrement</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h4 data-heading="2) Exemples" id="2)_Exemples">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>2) Exemples
+            </h4>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> nomVeg
+<span class="token keyword">FROM</span> LesVegetaux
+<span class="token keyword">WHERE</span> <span class="token keyword">type</span> <span class="token operator">=</span> <span class="token string">'légume'</span> <span class="token operator">AND</span> couleur <span class="token operator">=</span> <span class="token string">'orange'</span> <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> nomVeg<span class="token punctuation">,</span> prix <span class="token operator">*</span> <span class="token number">1.05</span>
+<span class="token keyword">FROM</span> lesVegetaux
+<span class="token keyword">WHERE</span> <span class="token keyword">type</span> <span class="token operator">=</span> <span class="token string">'fruit'</span> <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h3 data-heading="C – Tris" id="C_–_Tris">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>C – Tris
+            </h3>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> A <span class="token comment">--liste d'attributs</span>
+<span class="token keyword">FROM</span> R <span class="token comment">--nom de la relation</span>
+<span class="token punctuation">[</span><span class="token keyword">WHERE</span> condition<span class="token punctuation">]</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> B <span class="token punctuation">[</span><span class="token keyword">ASC</span><span class="token operator">/</span><span class="token keyword">DESC</span><span class="token punctuation">]</span> <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> nomVeg
+<span class="token keyword">FROM</span> lesVegetaux
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> prix <span class="token keyword">ASC</span> <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span>
+<span class="token keyword">FROM</span> 
+<span class="token punctuation">[</span><span class="token keyword">WHERE</span> condition<span class="token punctuation">]</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span>
+<span class="token keyword">LIMIT</span> a <span class="token comment">--nb d enregistrement renvoyé</span>
+<span class="token keyword">OFFSET</span> num <span class="token comment">--nombre d enregistrement renvoyé ;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Syntaxe</div>
+              </div>
+              <div class="callout-content">
+                <p><em>LIMIT a</em>&nbsp;: réduit le nombre d'enregistrement renvoyé au nombre de a (en partant du haut)<br>
+                  <em>OFFSET num</em>&nbsp;: décale le début des enregistrement séléctioner à num.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="D – Opérateurs d'agrégation" id="D_–_Opérateurs_d'agrégation">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>D – Opérateurs d'agrégation
+            </h3>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> <span class="token function">count</span><span class="token punctuation">(</span>nomVeg<span class="token punctuation">)</span>  
+<span class="token keyword">FROM</span> lesVegetaux
+<span class="token keyword">WHERE</span> <span class="token keyword">type</span> <span class="token operator">=</span> <span class="token string">'fleur'</span> <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token keyword">DISTINCT</span> nomVeg<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> lesVegetaux
+<span class="token keyword">WHERE</span> <span class="token keyword">type</span> <span class="token operator">=</span> <span class="token string">'fleur'</span> <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Syntaxe</div>
+              </div>
+              <div class="callout-content">
+                <p><em>count()</em>&nbsp;: compte le nombre<br>
+                  <em>max()</em>: la valeur maximale<br>
+                  <em>min()</em>: la valeur minimal<br>
+                  <em>avg()</em>: une moyenne<br>
+                  <em>sum()</em>: la somme
+                </p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="E – Partition" id="E_–_Partition">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>E – Partition
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="1) Syntaxe" id="1)_Syntaxe">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1) Syntaxe
+            </h4>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span>
+<span class="token keyword">FROM</span>
+<span class="token keyword">WHERE</span>
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> A –nom d un attribut
+<span class="token keyword">HAVING</span>
+<span class="token keyword">ORDER</span> <span class="token keyword">BY</span> <span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Exemple</div>
+              </div>
+              <div class="callout-content">
+                <p>Type de végétaux qui ont au moins 2 végétaux enregistrés.</p>
+                <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> <span class="token keyword">type</span>
+<span class="token keyword">FROM</span> lesVegetaux
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> <span class="token keyword">type</span>
+<span class="token keyword">HAVING</span> <span class="token function">count</span><span class="token punctuation">(</span>idVeg<span class="token punctuation">)</span> <span class="token operator">&gt;=</span> <span class="token number">2</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 data-heading="IV - Retour sur le modèle relationnel" id="IV_-_Retour_sur_le_modèle_relationnel">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>IV - Retour sur le modèle relationnel
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="Définitions" id="Définitions">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>Définitions
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définitions</div>
+              </div>
+              <div class="callout-content">
+                <p>Un <strong>domaine</strong> est une ensemble fini ou non de valeurs possibles.<br>
+                  L'ensemble des <strong>n-uplet</strong> est un produit cartésien de domaines.</p>
+                <p>On dit qu'on a une <strong>relation</strong> <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-sc mjx-i"><mjx-c class="mjx-c211B TEX-SC"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mrow data-mjx-texclass="ORD">
+                            <mi mathvariant="script">R</mi>
+                          </mrow>
+                        </math></mjx-assistive-mml></mjx-container></span> entre deux ensembles A et B si <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-sc mjx-i"><mjx-c class="mjx-c211B TEX-SC"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mrow data-mjx-texclass="ORD">
+                            <mi mathvariant="script">R</mi>
+                          </mrow>
+                        </math></mjx-assistive-mml></mjx-container></span> relation sur <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>A</mi>
+                          <mo>×</mo>
+                          <mi>B</mi>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  Si on a <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D434 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>a</mi>
+                          <mo>∈</mo>
+                          <mi>A</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> et <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="4"><mjx-c class="mjx-c1D435 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>b</mi>
+                          <mo>∈</mo>
+                          <mi>B</mi>
+                        </math></mjx-assistive-mml></mjx-container></span>, <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>a</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> et <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>b</mi>
+                        </math></mjx-assistive-mml></mjx-container></span> sont en relation par <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-texatom texclass="ORD"><mjx-mi class="mjx-sc mjx-i"><mjx-c class="mjx-c211B TEX-SC"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mrow data-mjx-texclass="ORD">
+                            <mi mathvariant="script">R</mi>
+                          </mrow>
+                        </math></mjx-assistive-mml></mjx-container></span> si <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mo class="mjx-n"><mjx-c class="mjx-c28"></mjx-c></mjx-mo><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c2C"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="2"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n"><mjx-c class="mjx-c29"></mjx-c></mjx-mo><mjx-mo class="mjx-n" space="4"><mjx-c class="mjx-c2208"></mjx-c></mjx-mo><mjx-texatom space="4" texclass="ORD"><mjx-mi class="mjx-sc mjx-i"><mjx-c class="mjx-c211B TEX-SC"></mjx-c></mjx-mi></mjx-texatom></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mo stretchy="false">(</mo>
+                          <mi>a</mi>
+                          <mo>,</mo>
+                          <mi>b</mi>
+                          <mo stretchy="false">)</mo>
+                          <mo>∈</mo>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi mathvariant="script">R</mi>
+                          </mrow>
+                        </math></mjx-assistive-mml></mjx-container></span>, noté <span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44E TEX-I"></mjx-c></mjx-mi><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-texatom texclass="ORD"><mjx-mi class="mjx-sc mjx-i"><mjx-c class="mjx-c211B TEX-SC"></mjx-c></mjx-mi></mjx-texatom><mjx-mtext class="mjx-n"><mjx-c class="mjx-cA0"></mjx-c></mjx-mtext><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D44F TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                          <mi>a</mi>
+                          <mtext>&nbsp;</mtext>
+                          <mrow data-mjx-texclass="ORD">
+                            <mi mathvariant="script">R</mi>
+                          </mrow>
+                          <mtext>&nbsp;</mtext>
+                          <mi>b</mi>
+                        </math></mjx-assistive-mml></mjx-container></span><br>
+                  On donne un nom aux différentes domaines de la relation, ce nom est appelé <strong>attribut</strong>.</p>
+                <p>La <strong>clé primaire</strong> d'une relation est un ensemble d'attributs qui détermine un n-uplet de manière unique.<br>
+                  Une <strong>clé étrangère</strong> est un ensemble d'attribut qui référence un ensemble d'attribut d'une autre relation.</p>
+                <p><a aria-label-position="top" aria-label="http://193.49.249.136:20180/~web/terminale/sgbd_vocabulaire.php#2.1" rel="noopener" class="external-link" href="http://193.49.249.136:20180/~web/terminale/sgbd_vocabulaire.php#2.1" target="_blank">Définitions plus clairs (cours de terminal)</a></p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h2 data-heading="V - SQL : Éléments avancés" id="V_-_SQL_:_Éléments_avancés">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>V - SQL : Éléments avancés
+            </h2>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Exemple de schéma relationnel</div>
+              </div>
+              <div class="callout-content">
+                <p>LesVegetaux(<u>idVeg</u>, nom, couleur, type)<br>
+                  LesProducteurs(<u>idProd</u>, nomBoutique, surface, dept)<br>
+                  LesPrix(<u>#idProd</u>, <u>#idVeg</u>, prix)</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="A - Produit cartésien" id="A_-_Produit_cartésien">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>A - Produit cartésien
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="1) Présentation" id="1)_Présentation">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1) Présentation
+            </h4>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>R</mi>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">A</th>
+                  <th align="center">B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">1</td>
+                  <td align="center">'C'</td>
+                </tr>
+                <tr>
+                  <td align="center">2</td>
+                  <td align="center">'D'</td>
+                </tr>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">'C'</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>S</mi>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">A</th>
+                  <th align="center">C</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">'A'</td>
+                </tr>
+                <tr>
+                  <td align="center">4</td>
+                  <td align="center">'C'</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi><mjx-mo class="mjx-n" space="3"><mjx-c class="mjx-cD7"></mjx-c></mjx-mo><mjx-mi class="mjx-i" space="3"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>R</mi>
+                      <mo>×</mo>
+                      <mi>S</mi>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">A</th>
+                  <th align="center">B</th>
+                  <th align="center">A</th>
+                  <th align="center">C</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">1</td>
+                  <td align="center">'C'</td>
+                  <td align="center">3</td>
+                  <td align="center">'A'</td>
+                </tr>
+                <tr>
+                  <td align="center">1</td>
+                  <td align="center">'C'</td>
+                  <td align="center">4</td>
+                  <td align="center">'C'</td>
+                </tr>
+                <tr>
+                  <td align="center">2</td>
+                  <td align="center">'D'</td>
+                  <td align="center">3</td>
+                  <td align="center">'A'</td>
+                </tr>
+                <tr>
+                  <td align="center">2</td>
+                  <td align="center">'D'</td>
+                  <td align="center">4</td>
+                  <td align="center">'C'</td>
+                </tr>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">'C'</td>
+                  <td align="center">3</td>
+                  <td align="center">'A'</td>
+                </tr>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">'C'</td>
+                  <td align="center">4</td>
+                  <td align="center">'C'</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h4 data-heading="2) Syntax en SQL" id="2)_Syntax_en_SQL">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>2) Syntax en SQL
+            </h4>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> R<span class="token punctuation">,</span> S<span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h3 data-heading="B - Jointures" id="B_-_Jointures">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>B - Jointures
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="1) Exemple" id="1)_Exemple">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1) Exemple
+            </h4>
+          </div>
+          <div>
+            <p>Nom et prix des végétaux chez le producteur idProd = 1</p>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> V<span class="token punctuation">.</span>nom<span class="token punctuation">,</span> P<span class="token punctuation">.</span>prix
+<span class="token keyword">FROM</span> LesVegetaux <span class="token keyword">AS</span> V <span class="token keyword">JOIN</span> LesPrix <span class="token keyword">AS</span> P
+<span class="token keyword">ON</span> V<span class="token punctuation">.</span>idVeg <span class="token operator">=</span> P<span class="token punctuation">.</span>idVeg
+<span class="token keyword">WHERE</span> P<span class="token punctuation">.</span>idProd <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>Prix max par boutique</p>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> nomBoutique<span class="token punctuation">,</span> <span class="token function">max</span><span class="token punctuation">(</span>prix<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> LesProducteurs <span class="token keyword">AS</span> P <span class="token keyword">JOIN</span> LesPrix
+<span class="token keyword">ON</span> P<span class="token punctuation">.</span>idProd <span class="token operator">=</span> LesPrix<span class="token punctuation">.</span>idProd
+<span class="token keyword">GROUP</span> <span class="token keyword">BY</span> nomBoutique<span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D445 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>R</mi>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">A</th>
+                  <th align="center">B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">1</td>
+                  <td align="center">Castor</td>
+                </tr>
+                <tr>
+                  <td align="center">2</td>
+                  <td align="center">Loutre</td>
+                </tr>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">Elan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <p><span class="math math-inline is-loaded"><mjx-container class="MathJax" jax="CHTML" style="position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D446 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML">
+                      <mi>S</mi>
+                    </math></mjx-assistive-mml></mjx-container></span></p>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">A</th>
+                  <th align="center">C</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">bonjour</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> S<span class="token punctuation">.</span>A<span class="token punctuation">,</span> S<span class="token punctuation">.</span>C<span class="token punctuation">,</span> R<span class="token punctuation">.</span>B
+<span class="token keyword">FROM</span> R
+<span class="token keyword">JOIN</span> S <span class="token keyword">ON</span> R<span class="token punctuation">.</span>A <span class="token operator">=</span> S<span class="token punctuation">.</span>A<span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">S.A</th>
+                  <th align="center">S.C</th>
+                  <th align="center">R.B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">bonjour</td>
+                  <td align="center">Elan</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> S<span class="token punctuation">.</span>A<span class="token punctuation">,</span> S<span class="token punctuation">.</span>C<span class="token punctuation">,</span> R<span class="token punctuation">.</span>B
+<span class="token keyword">FROM</span> R <span class="token keyword">LEFT</span> <span class="token keyword">JOIN</span> S <span class="token keyword">ON</span> S<span class="token punctuation">.</span>A <span class="token operator">=</span> R<span class="token punctuation">.</span>A<span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th align="center">S.A</th>
+                  <th align="center">S.C</th>
+                  <th align="center">R.B</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">3</td>
+                  <td align="center">bonjour</td>
+                  <td align="center">Elan</td>
+                </tr>
+                <tr>
+                  <td align="center">NULL</td>
+                  <td align="center">NULL</td>
+                  <td align="center">Castor</td>
+                </tr>
+                <tr>
+                  <td align="center">NULL</td>
+                  <td align="center">NULL</td>
+                  <td align="center">Loutre</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div>
+            <h3 data-heading="C - Opérateurs ensemblistes" id="C_-_Opérateurs_ensemblistes">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>C - Opérateurs ensemblistes
+            </h3>
+          </div>
+          <div>
+            <h4 data-heading="1) Les opérateurs ensemblistes" id="1)_Les_opérateurs_ensemblistes">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>1) Les opérateurs ensemblistes
+            </h4>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">UNION</span><span class="token punctuation">,</span> <span class="token keyword">INTERSECT</span><span class="token punctuation">,</span> <span class="token keyword">EXCEPT</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <p>s'appliquent sur des relations qui ont le même schéma relationnel</p>
+          </div>
+          <div>
+            <p>Nom des végétaux de type légume qui ne sont pas de couleur rouge :</p>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> nom <span class="token keyword">FROM</span> LesVegetaux
+<span class="token keyword">WHERE</span> <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">'legume'</span>
+<span class="token keyword">EXCEPT</span>
+<span class="token keyword">SELECT</span> nom <span class="token keyword">FROM</span> LesVegetaux
+<span class="token keyword">WHERE</span> couleur<span class="token operator">=</span><span class="token string">'rouge'</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token operator">IN</span> <span class="token operator">/</span> <span class="token operator">NOT</span> <span class="token operator">IN</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <pre class="language-sql" tabindex="0"><code class="language-sql is-loaded"><span class="token keyword">SELECT</span> nom <span class="token keyword">AS</span> n
+<span class="token keyword">FROM</span> LesVegetaux
+<span class="token keyword">WHERE</span> nom <span class="token operator">NOT</span> <span class="token operator">IN</span>
+<span class="token punctuation">(</span><span class="token keyword">SELECT</span> nom <span class="token keyword">FROM</span> LesVegetaux <span class="token keyword">WHERE</span> couleur<span class="token operator">=</span><span class="token string">'rouge'</span><span class="token punctuation">)</span>
+<span class="token operator">AND</span> <span class="token keyword">type</span><span class="token operator">=</span><span class="token string">'legume'</span><span class="token punctuation">;</span>
+</code><button class="copy-code-button">Copy</button></pre>
+          </div>
+          <div>
+            <h2 data-heading="VI - Modèle entité association" id="VI_-_Modèle_entité_association">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>VI - Modèle entité association
+            </h2>
+          </div>
+          <div>
+            <h3 data-heading="A - Définitions" id="A_-_Définitions">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>A - Définitions
+            </h3>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définition</div>
+              </div>
+              <div class="callout-content">
+                <p>Une <strong>entité</strong> est la réprésentation d'un objet ayant une existence propre.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="example" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-list">
+                    <line x1="8" y1="6" x2="21" y2="6"></line>
+                    <line x1="8" y1="12" x2="21" y2="12"></line>
+                    <line x1="8" y1="18" x2="21" y2="18"></line>
+                    <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                    <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                    <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                  </svg></div>
+                <div class="callout-title-inner">Exemples</div>
+              </div>
+              <div class="callout-content">
+                <ul class="has-list-bullet">
+                  <li data-line="1">
+                    <div class="list-bullet"></div>un végétal
+                  </li>
+                  <li data-line="2">
+                    <div class="list-bullet"></div>une boutique
+                  </li>
+                  <li data-line="3">
+                    <div class="list-bullet"></div>un département
+                  </li>
+                  <li data-line="4">
+                    <div class="list-bullet"></div>un prix
+                  </li>
+                  <li data-line="5">
+                    <div class="list-bullet"></div>un producteur
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Remarque</div>
+              </div>
+              <div class="callout-content">
+                <p>Une entité peut posséder des propriétés, par exemple la couleur.</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définitions</div>
+              </div>
+              <div class="callout-content">
+                <p>Une <strong>association</strong> est un lien entre différentes entités.</p>
+                <p>La <strong>cardinalité</strong> d'un lien est représentée par un couple de valeurs indiquant le minimum et le maximum de fois qu'une entité apparaît dauns une association.<br>
+                  La valeur min est généralement soit 0 soit 1. On écrit * lorsqu'on ne connaît pas la valeur max. La cardinalité est notée a..b avec a la valeur min et b la valeur max.<br>
+                  Notation : la cardinalité 0..* est notée *</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div data-callout-metadata="" data-callout-fold="" data-callout="note" class="callout">
+              <div class="callout-title">
+                <div class="callout-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon lucide-pencil">
+                    <line x1="18" y1="2" x2="22" y2="6"></line>
+                    <path d="M7.5 20.5 19 9l-4-4L3.5 16.5 2 22z"></path>
+                  </svg></div>
+                <div class="callout-title-inner">Définitions</div>
+              </div>
+              <div class="callout-content">
+                <p>Le <strong>type d'une association</strong> est déterminé par les bornes maximums des deux côtés de l'association.<br>
+                  Le type de l'association indique comment traduire l'association dans le modèle relationnel.</p>
+                <p>1-* : association dite <em>fonctionnelle</em> ou <em>hiérarchique</em>, chaque élément de l'entité du côté * peut être lié à plusieurs élément de l'entité du côté 1 (ex: livre-auteur)<br>
+                  1-1 : à chaque élément de l'entité A est lié exactement un élément de l'entité B (ex: proviseur-lycée)<br>
+                  *-* : chaque élément de l'entité A est lié à plusieurs élément de l'entité B et inversement (ex: animal-maladie) </p>
+                <p>Chaque entité est représentée par une table. Pour chaque association :<br>
+                  1-* : ajouter une clé étrangère du côté 1 qui référence la clé primaire du côté *<br>
+                  *-* : ajouter une table d'association dont la clé est la paire de clés étrangères<br>
+                  Dans le cas des associations 1-1, on peut fusinonner les entités</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h3 data-heading="B - Exemple" id="B_-_Exemple">
+              <div class="heading-collapse-indicator collapse-indicator collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div>B - Exemple
+            </h3>
+          </div>
+          <div>
+            <p><span alt="Web/src/Pasted image 20230130115449.png" src="Web/src/Pasted image 20230130115449.png" class="internal-embed is-loaded file-embed mod-empty">"Web/src/Pasted image 20230130115449.png" is not created yet. Click to create.</span></p>
+          </div>
+          <div class="mod-footer"></div>
+        </div>
+      </div>
+    </div>
+    <div id="sidebar" class="sidebar-right">
+      <div class="sidebar-content">
+        <div class="outline-container" data-size="0">
+          <div class="outline-header">
+            <h6 style="margin: 1em 1em 1em 0px;">Table of Contents</h6><button class="clickable-icon collapse-all"><iconify-icon icon="ph:arrows-in-line-horizontal-bold" width="18px" height="18px" rotate="90deg" color="currentColor"></iconify-icon></button>
+          </div>
+          <div class="outline-item" data-size="1"><a class="outline-item-contents internal-link" href="#Chapitre_10_-_Bases_de_données_relationnelles">
+              <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                  <path d="M3 8L12 17L21 8"></path>
+                </svg></div><span class="outline-item-title">Chapitre 10 - Bases de données relationnelles</span>
+            </a>
+            <div class="outline-item-children">
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#I_–_Introduction">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">I – Introduction</span>
+                </a>
+                <div class="outline-item-children"></div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#II_–_Bases_de_données_relationnelles">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">II – Bases de données relationnelles</span>
+                </a>
+                <div class="outline-item-children"></div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#III-_Interrogation_avec_le_langage_SQL">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">III- Interrogation avec le langage SQL</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#A_–_Projection">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">A – Projection</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1)_Présentation">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1) Présentation</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#2)_Syntaxe_en_SQL">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">2) Syntaxe en SQL</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#3&nbsp;)_Gestion_des_doublons">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">3&nbsp;) Gestion des doublons</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#B_–_Selection">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">B – Selection</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1)_Syntaxe">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1) Syntaxe</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#2)_Exemples">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">2) Exemples</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#C_–_Tris">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">C – Tris</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#D_–_Opérateurs_d'agrégation">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">D – Opérateurs d'agrégation</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#E_–_Partition">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">E – Partition</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1)_Syntaxe">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1) Syntaxe</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#IV_-_Retour_sur_le_modèle_relationnel">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">IV - Retour sur le modèle relationnel</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#Définitions">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">Définitions</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#V_-_SQL_:_Éléments_avancés">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">V - SQL : Éléments avancés</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#A_-_Produit_cartésien">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">A - Produit cartésien</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1)_Présentation">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1) Présentation</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#2)_Syntax_en_SQL">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">2) Syntax en SQL</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#B_-_Jointures">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">B - Jointures</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1)_Exemple">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1) Exemple</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#C_-_Opérateurs_ensemblistes">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">C - Opérateurs ensemblistes</span>
+                    </a>
+                    <div class="outline-item-children">
+                      <div class="outline-item" data-size="4"><a class="outline-item-contents internal-link" href="#1)_Les_opérateurs_ensemblistes">
+                          <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                              <path d="M3 8L12 17L21 8"></path>
+                            </svg></div><span class="outline-item-title">1) Les opérateurs ensemblistes</span>
+                        </a>
+                        <div class="outline-item-children"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="outline-item" data-size="2"><a class="outline-item-contents internal-link" href="#VI_-_Modèle_entité_association">
+                  <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                      <path d="M3 8L12 17L21 8"></path>
+                    </svg></div><span class="outline-item-title">VI - Modèle entité association</span>
+                </a>
+                <div class="outline-item-children">
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#A_-_Définitions">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">A - Définitions</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                  <div class="outline-item" data-size="3"><a class="outline-item-contents internal-link" href="#B_-_Exemple">
+                      <div class="tree-item-icon collapse-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="svg-icon right-triangle">
+                          <path d="M3 8L12 17L21 8"></path>
+                        </svg></div><span class="outline-item-title">B - Exemple</span>
+                    </a>
+                    <div class="outline-item-children"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
