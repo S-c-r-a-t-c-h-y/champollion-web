@@ -1,5 +1,7 @@
 # Info MP2I - 2022/2023 Champollion
 
+This is the readme
+
 ## Gitlab
 
 > [!info] Lien
