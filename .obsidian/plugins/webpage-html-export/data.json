@@ -1,5 +1,5 @@
 {
-  "inlineCSS": false,
+  "inlineCSS": true,
   "inlineJS": true,
   "inlineImages": true,
   "includePluginCSS": "quick-latex\nbetter-pdf-plugin",

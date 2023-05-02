@@ -11,28 +11,11 @@
             "id": "53d61117c382882d",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "src/Index.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "94e4a920a63a02fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -160,11 +139,11 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "8f0abb43baf97170",
+  "active": "53d61117c382882d",
   "lastOpenFiles": [
-    "HTML/index.html",
     "index.html",
     "src/Chapitre_1.md",
+    "HTML/index.html",
     "src/Chapitre_10.md",
     "src/Chapitre_11.md",
     "src/Chapitre_12.md",
@@ -179,8 +158,9 @@
     "src/Chapitre_7.md",
     "src/Chapitre_8.md",
     "src/Chapitre_9.md",
-    "src/Index.md",
+    "Index.md",
     "README.md",
+    "HTML/src/index.html",
     "HTML/readme.html",
     "src/Chapitre_5.pdf",
     "HTML/src/Chapitre_5.pdf",
@@ -189,8 +169,6 @@
     "HTML/src/chapitre_7.html",
     "Web/src/Chapitre_5.pdf.md",
     "Web/src",
-    "Web",
-    "HTML/src/chapitre_10.html",
     "Source/Chapitre_1.md",
     "Source/Chapitre_6.md"
   ]
