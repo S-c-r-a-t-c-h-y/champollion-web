@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Index.md",
+                "file": "src/Index.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Index.md",
+                "file": "src/Index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Index.md",
+                "file": "src/Index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Index.md"
+                "file": "src/Index.md"
               }
             }
           }
@@ -147,10 +147,10 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "53d61117c382882d",
+  "active": "8f0abb43baf97170",
   "lastOpenFiles": [
     "src/Chapitre_1.md",
-    "Index.md",
+    "src/Index.md",
     "src/Chapitre_9.md",
     "src/Chapitre_8.md",
     "src/Chapitre_7.md",
@@ -168,7 +168,7 @@
     "src/Chapitre_4.md",
     "src/Chapitre_3.md",
     "src/cours_sem_12_gestion-memoire_memo.pdf",
-    "HTML/src/index.html",
+    "index.html",
     "HTML/src/chapitre_7.html",
     "Web/src/Chapitre_5.pdf.md",
     "Web/src",
