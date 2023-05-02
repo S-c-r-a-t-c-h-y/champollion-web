@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "94e4a920a63a02fa",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "src/Index.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "src/Index.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "src/Index.md"
+                "file": "README.md"
               }
             }
           }
@@ -147,10 +160,11 @@
       "webpage-html-export:Export Vault to HTML": false
     }
   },
-  "active": "8f0abb43baf97170",
+  "active": "94e4a920a63a02fa",
   "lastOpenFiles": [
-    "src/Chapitre_1.md",
     "src/Index.md",
+    "README.md",
+    "src/Chapitre_1.md",
     "src/Chapitre_9.md",
     "src/Chapitre_8.md",
     "src/Chapitre_7.md",
@@ -168,7 +182,7 @@
     "src/Chapitre_4.md",
     "src/Chapitre_3.md",
     "src/cours_sem_12_gestion-memoire_memo.pdf",
-    "index.html",
+    "HTML/src/index.html",
     "HTML/src/chapitre_7.html",
     "Web/src/Chapitre_5.pdf.md",
     "Web/src",
