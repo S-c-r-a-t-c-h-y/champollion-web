@@ -1,6 +1,6 @@
 # Chapitre 9 - Structures de données
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I - Les listes chaînées

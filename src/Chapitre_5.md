@@ -1,9 +1,10 @@
 # Chapitre 5 - Analyse de programmes
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
-[[Chapitre_5.pdf]]
+> [!pdf] PDF
+[[Chapitre_5.pdf|Cours du chapitre 5]]
 
 ```pdf
 {

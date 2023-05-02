@@ -1,6 +1,6 @@
 # Chapitre 10 - Bases de données relationnelles
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I – Introduction

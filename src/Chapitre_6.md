@@ -1,6 +1,6 @@
 # Chapitre 6 - Types structurés
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## III - Retour sur l'allocation des structures en C

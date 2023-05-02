@@ -1,6 +1,6 @@
 # Chapitre 2 - Notion de complexité
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 > [!note] Définition

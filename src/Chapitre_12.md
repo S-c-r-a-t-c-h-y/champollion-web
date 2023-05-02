@@ -1,6 +1,6 @@
 # Chapitre 12 : Un peu d'ordre...
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I - Relation Binaires

@@ -1,6 +1,6 @@
 # Chapitre 14 - Paradigmes algorithmiques
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 > [!tldr] Situation

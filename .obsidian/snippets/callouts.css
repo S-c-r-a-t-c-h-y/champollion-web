@@ -1,6 +1,4 @@
-
-/* --- callouts.css --- */  
- .callout[data-callout="pdf"] {
+.callout[data-callout="pdf"] {
     --callout-color: 247, 0, 0;
     --callout-icon : lucide-file-text;
 }
@@ -9,6 +7,3 @@
     --callout-color: 33, 126, 255;
     --callout-icon : lucide-link;
 }
-  
-
-

@@ -1,6 +1,6 @@
 # Chapitre 15 - Graphes et algorithmes associés
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I - Graphes

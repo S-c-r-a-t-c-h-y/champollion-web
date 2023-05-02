@@ -1,6 +1,6 @@
 # Chapitre 4 - Introduction en C
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I - Elements de langage

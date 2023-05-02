@@ -1,7 +1,10 @@
 # Chapitre 8 - Gestion de la mémoire
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
+
+> [!pdf] PDF
+> [[cours_sem_12_gestion-memoire_memo.pdf|Début du cours du chapitre 8]]
 
 ```pdf
 {

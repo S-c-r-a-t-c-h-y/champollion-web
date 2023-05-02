@@ -1,6 +1,6 @@
 # Chapitre 13 : Les arbres
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I - Notion d'arbre

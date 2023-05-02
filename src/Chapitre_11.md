@@ -1,6 +1,6 @@
 # Chapitre 11 - Traits impératifs en OCaml
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I - 

@@ -1,6 +1,6 @@
 # Chapitre 3 - Correction des algorithmes
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I - Définitions

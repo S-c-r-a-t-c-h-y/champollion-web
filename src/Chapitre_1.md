@@ -1,6 +1,6 @@
 # Chapitre 1 - Introduction à la programmation fonctionnelle avec Ocaml
 
-> [!info] Index
+> [!link] Index
 > [[Index|Retour à l'index]]
 
 ## I - Présentation du language Ocaml

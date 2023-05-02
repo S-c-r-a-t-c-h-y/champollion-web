@@ -1,7 +1,7 @@
 {
   "inlineCSS": false,
-  "inlineJS": true,
-  "inlineImages": true,
+  "inlineJS": false,
+  "inlineImages": false,
   "includePluginCSS": "quick-latex\nbetter-pdf-plugin",
   "makeNamesWebStyle": true,
   "allowFoldingHeadings": true,
